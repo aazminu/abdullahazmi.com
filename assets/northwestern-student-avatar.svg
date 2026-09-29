@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288" role="img" aria-label="Northwestern Student monogram placeholder">
+  <rect width="288" height="288" rx="144" fill="#3A2A1C"/>
+  <circle cx="144" cy="144" r="116" fill="none" stroke="#AAB56C" stroke-opacity=".4"/>
+  <circle cx="144" cy="144" r="89" fill="none" stroke="#AAB56C" stroke-opacity=".27"/>
+  <text x="144" y="162" text-anchor="middle" fill="#FBFBF9" font-family="Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-6">NS</text>
+  <circle cx="224" cy="220" r="9" fill="#AAB56C"/>
+</svg>
