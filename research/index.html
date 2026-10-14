@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Bricolage+Grotesque:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Computational Systems & Agentic Science Research Group — Knowledge Graphs, Multi-Agent Scientific Workflows, and Grounded Literature Synthesis."
+    />
+    <title>Agentic Science & Knowledge Systems Lab | Northwestern CS Research</title>
+    <link rel="stylesheet" href="../assets/index-yL4Jrv0C.css" />
+    <link rel="stylesheet" href="../assets/extension.css" />
+    <style>
+      .lab-subnav-link {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 4px 0;
+        transition: color 0.15s ease;
+        display: none;
+      }
+      @media (width >= 500px) {
+        .lab-subnav-link {
+          display: inline-block;
+        }
+      }
+      .lab-subnav-link:hover,
+      .lab-subnav-link:focus-visible {
+        color: var(--accent);
+      }
+      .lab-badge-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        border: 1px solid color-mix(in srgb, var(--accent) 45%, var(--hairline));
+        padding: 6px 12px;
+        margin-bottom: 18px;
+        background: color-mix(in srgb, var(--accent) 7%, var(--bg));
+      }
+      .lab-abstract-box {
+        border: 1px solid var(--hairline);
+        background: color-mix(in srgb, var(--ink) 2%, var(--bg));
+        padding: clamp(22px, 3.5vw, 36px);
+        margin-top: 24px;
+      }
+      .lab-abstract-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid var(--hairline);
+      }
+      @media (width < 800px) {
+        .lab-abstract-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .lab-abstract-col h3 {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+      .lab-abstract-col p {
+        font-size: 14px;
+        line-height: 1.65;
+        color: var(--ink);
+      }
+      .lab-ref-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        margin-top: auto;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body data-theme="light">
+    <div id="root">
+      <!-- Navigation -->
+      <nav id="lab-nav" class="_nav_p88qd_1 _scrolled_p88qd_12" aria-label="Primary Navigation">
+        <div class="_inner_p88qd_17">
+          <a href="../" class="_logo_p88qd_41" style="text-decoration: none;">NS / LAB</a>
+          <div class="_links_p88qd_61">
+            <a href="#overview" class="lab-subnav-link">Overview</a>
+            <a href="#areas" class="lab-subnav-link">Research Areas</a>
+            <a href="#directory" class="lab-subnav-link">Team &amp; PI</a>
+            <a href="#deliverables" class="lab-subnav-link">Systems</a>
+            <a href="#reference-labs" class="lab-subnav-link">10 Reference Labs</a>
+            <a href="../labs/" class="_resume_p88qd_104">Lab Archive (10) ↗</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="_heroWrapper_1gba7_2" id="overview">
+        <section id="hero" class="_hero_1gba7_2" style="min-height: auto; padding-bottom: 48px;">
+          <div>
+            <span class="lab-badge-pill">PUBLIC RESEARCH GROUP PORTAL · COMPUTATIONAL / DRY LAB</span>
+          </div>
+          <div class="_nameRow_1gba7_17">
+            <div class="_name_1gba7_17">
+              <div class="_lineMask_1gba7_31">
+                <span class="_lineInner_1gba7_35">Agentic</span>
+              </div>
+              <div class="_lineMask_1gba7_31">
+                <span class="_lineInner_1gba7_35">Science Lab<span class="_stop_1gba7_52">.</span></span>
+              </div>
+            </div>
+            <img
+              src="../assets/northwestern-student-avatar.svg"
+              class="_photo_1gba7_60"
+              alt="Agentic Science & Knowledge Systems Research Group"
+            />
+          </div>
+
+          <div class="_bottom_1gba7_75">
+            <div class="_bottomRight_1gba7_84">
+              <div class="_meta_1gba7_91">
+                <span>Computational Systems, Scientific Knowledge Graphs &amp; Multi-Agent Discovery</span>
+                <span>Department of Computer Science · McCormick School of Engineering · Northwestern University</span>
+                <span>Group Lead / Principal Investigator: Abdullah Azmi (aazminu) · Non-Commercial Academic Research</span>
+              </div>
+              <div class="_metaLinks_1gba7_107">
+                <a href="https://github.com/aazminu" target="_blank" rel="noreferrer">github</a>
+                <a href="https://github.com/aazminu/paper-pulse" target="_blank" rel="noreferrer">paper-pulse</a>
+                <a href="../labs/">10-lab-archive</a>
+                <a href="../">portfolio</a>
+                <button type="button" id="theme-toggle-btn" class="_themeToggle_1gba7_135" aria-label="Toggle theme">
+                  <span class="_swatch_1gba7_142" aria-hidden="true"></span>
+                  <span id="theme-toggle-label">dark</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="_heroHairline_1gba7_162" style="margin-top: 40px;" aria-hidden="true"></div>
+        </section>
+      </section>
+
+      <!-- Flagship 6-12 Month Research Project & Abstract Section -->
+      <section class="_container_1aul7_1" id="areas" style="padding-top: 32px;">
+        <div class="reveal visible sectionHead">
+          <p class="sectionLabel">01 / Active 6–12 Month Research Program</p>
+          <h1 class="sectionTitle">Scientific Workflows &amp; Focus</h1>
+        </div>
+
+        <article class="portfolio-featured" aria-label="Flagship Research Initiative">
+          <div class="portfolio-featured__main">
+            <p class="portfolio-featured__kicker">
+              <span class="portfolio-featured__label">FLAGSHIP INITIATIVE — COMPUTATIONAL / DRY LAB</span>
+              <span class="portfolio-featured__index">2026 – 2027</span>
+            </p>
+            <div class="portfolio-featured__title-row">
+              <h2 class="portfolio-featured__title">Autonomous Literature-to-Hypothesis Synthesis &amp; Multi-Database Grounding</h2>
+              <span class="portfolio-featured__status">Active Non-Commercial Research</span>
+            </div>
+            <p class="portfolio-featured__description">
+              Building on our open-source PaperPulse engine, our group investigates how multi-agent reasoning models (including Gemini 4 Argon inside Google Antigravity) can bridge fragmented scientific literature across ArXiv, PubMed, Semantic Scholar, and OpenAlex with structured biological and physical databases (AlphaGenome, AlphaFold Database, UniProt, and ChEMBL) to construct verifiable citation-concept knowledge graphs and executable validation scripts.
+            </p>
+            <ul class="portfolio-featured__tech" aria-label="Research Keywords and Stack">
+              <li>Scientific Knowledge Graphs</li>
+              <li>Multi-Agent Research Workflows</li>
+              <li>Automated Literature Synthesis</li>
+              <li>Python / FastAPI</li>
+              <li>Neo4j &amp; pgvector</li>
+              <li>Google Antigravity Science Skills</li>
+            </ul>
+            <a
+              href="https://github.com/aazminu/paper-pulse"
+              target="_blank"
+              rel="noreferrer"
+              class="portfolio-featured__cta"
+            >
+              Inspect PaperPulse Repository ↗
+            </a>
+          </div>
+          <aside class="portfolio-featured__meta" aria-label="Research Group Classification">
+            <div class="portfolio-featured__meta-row">
+              <span class="portfolio-featured__meta-label">PRIMARY FIELD</span>
+              <strong class="portfolio-featured__meta-value">Computer Science, Data Science, AI &amp; Machine Learning</strong>
+            </div>
+            <div class="portfolio-featured__meta-row">
+              <span class="portfolio-featured__meta-label">SPECIALIZATION</span>
+              <strong class="portfolio-featured__meta-value">Scientific Knowledge Graphs, Multi-Agent Workflows, Automated Literature Synthesis</strong>
+            </div>
+            <div class="portfolio-featured__meta-row">
+              <span class="portfolio-featured__meta-label">METHODOLOGY</span>
+              <strong class="portfolio-featured__meta-value">Computational / Dry Lab</strong>
+            </div>
+            <div class="portfolio-featured__meta-row">
+              <span class="portfolio-featured__meta-label">ORGANIZATION</span>
+              <strong class="portfolio-featured__meta-value">Northwestern University (CS)</strong>
+            </div>
+            <span class="portfolio-featured__mark">LAB.</span>
+          </aside>
+        </article>
+
+        <!-- Grant-Style High-Level Abstract (Problem / Approach / Deliverables) -->
+        <div class="lab-abstract-box">
+          <p class="sectionLabel">Public Grant Abstract · 6–12 Month Roadmap</p>
+          <h2 style="font-family: var(--font-display); font-size: clamp(22px, 2.6vw, 30px); margin-bottom: 8px;">
+            Grounded Multi-Agent Reasoning over Cross-Disciplinary Scientific Literature and Biomolecular Databases
+          </h2>
+          <div class="lab-abstract-grid">
+            <div class="lab-abstract-col">
+              <h3>01 · Problem &amp; Bottleneck</h3>
+              <p>
+                Rapidly expanding preprint and biomedical repositories create a severe synthesis bottleneck: existing retrieval-augmented pipelines rely on shallow abstract embeddings that fail to trace multi-hop citation provenance, verify mathematical formulations against source code, or cross-reference textual claims against structured genomic and molecular databases.
+              </p>
+            </div>
+            <div class="lab-abstract-col">
+              <h3>02 · Approach &amp; Antigravity Integration</h3>
+              <p>
+                We combine hybrid dense-sparse vector retrieval (PostgreSQL/pgvector) and Neo4j citation-concept knowledge graphs with parallel agentic workflows in Google Antigravity powered by Gemini 4 Argon's 1M-token context and DeepMind Science Skills (ArXiv, OpenAlex, PubMed, AlphaGenome, and UniProt) to autonomously audit empirical claims and execute reproducible verification pipelines.
+              </p>
+            </div>
+            <div class="lab-abstract-col">
+              <h3>03 · Expected 6–12 Month Deliverables</h3>
+              <p>
+                Over the next 6–12 months, we will release an open-source multi-agent scientific synthesis framework (`PaperPulse v2`), a curated benchmark dataset of cross-paper claim verification graphs, custom Google Antigravity Science skills, and a peer-reviewed manuscript on grounded agentic literature discovery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Core Research Thrust Cards -->
+        <div class="reveal visible _grid_1aul7_9" style="margin-top: 24px;">
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">01 · Full-Text Knowledge Graphs &amp; Citation Provenance</h2>
+            <span class="_award_1aul7_42">Thrust I · Retrieval &amp; Graph Reasoning</span>
+            <ul class="_tech_1aul7_51">
+              <li>Neo4j</li>
+              <li>pgvector</li>
+              <li>Cohere Rerank</li>
+              <li>OpenAlex / ArXiv / PubMed</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Extracting structured entities, experimental parameters, and citation relationships from full-text PDFs across ArXiv, Semantic Scholar, PubMed, and OpenAlex. Multi-hop graph traversal agents identify methodological lineages and contradictions across thousands of preprints.
+            </p>
+            <a href="https://github.com/aazminu/paper-pulse" target="_blank" rel="noreferrer" class="_link_1aul7_72">
+              repository <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">02 · Grounded Multi-Agent Scientific Verification</h2>
+            <span class="_award_1aul7_42">Thrust II · Agentic Workflows</span>
+            <ul class="_tech_1aul7_51">
+              <li>Google Antigravity</li>
+              <li>Gemini 4 Argon</li>
+              <li>Science Skills</li>
+              <li>Python</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Deploying parallel subagent critique loops to cross-check mathematical derivations, statistical assumptions, and simulation scripts against published benchmarks, preventing hallucinated citations and ensuring end-to-end reproducibility.
+            </p>
+            <a href="https://github.com/google-deepmind/science-skills" target="_blank" rel="noreferrer" class="_link_1aul7_72">
+              science-skills <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">03 · Cross-Modal Bioinformatics &amp; Variant Grounding</h2>
+            <span class="_award_1aul7_42">Thrust III · Computational Biology</span>
+            <ul class="_tech_1aul7_51">
+              <li>AlphaGenome</li>
+              <li>AlphaFold DB</li>
+              <li>UniProt / ClinVar</li>
+              <li>PyMOL</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Connecting literature mining directly to genomic and structural biology APIs—automating variant impact scoring, splice-disruption Sashimi plot generation, and structural homology lookups within unified agentic notebooks.
+            </p>
+            <a href="../labs/07-stanford-kundaje-lab/" class="_link_1aul7_72">
+              reference workflow <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">04 · Legacy Scientific Code Modernization &amp; HPC</h2>
+            <span class="_award_1aul7_42">Thrust IV · Scientific Computing</span>
+            <ul class="_tech_1aul7_51">
+              <li>Rust / C++</li>
+              <li>Python</li>
+              <li>Parallel Execution</li>
+              <li>Property Testing</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Automated translation and optimization of serial scientific analysis scripts and legacy numerical kernels into memory-safe, parallelized execution pipelines backed by deterministic regression fixtures.
+            </p>
+            <a href="https://github.com/aazminu" target="_blank" rel="noreferrer" class="_link_1aul7_72">
+              github profile <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Lab Directory / Affiliation Verification Section -->
+      <section class="_container_qhq2s_1" id="directory">
+        <div class="reveal visible sectionHead">
+          <p class="sectionLabel">02 / Group Leadership, Roster &amp; Open-Source Systems</p>
+          <h1 class="sectionTitle">Lab Directory &amp; Systems</h1>
+        </div>
+
+        <div class="_jobList_qhq2s_7" id="deliverables">
+          <article class="reveal visible _job_qhq2s_7">
+            <div class="_dateCol_qhq2s_23">
+              <span class="_date_qhq2s_23 nums">2025 — PRESENT</span>
+              <span class="_current_qhq2s_41">Lead / PI</span>
+            </div>
+            <div>
+              <div class="_top_qhq2s_59">
+                <h2 class="_company_qhq2s_66">
+                  Abdullah Azmi <span class="_startup_qhq2s_76">(Group Lead &amp; Principal Developer)</span>
+                </h2>
+              </div>
+              <div class="_sub_qhq2s_107">
+                <span class="_role_qhq2s_87">Computer Science &amp; AI Systems Researcher</span>
+                <span class="_location_qhq2s_97">Northwestern University · Evanston, IL / New York, NY</span>
+              </div>
+              <ul class="_bullets_qhq2s_120">
+                <li>
+                  Architect and maintainer of <strong class="_accent_qhq2s_148">PaperPulse</strong> (<a href="https://github.com/aazminu/paper-pulse" target="_blank" rel="noreferrer" style="color: var(--accent);">github.com/aazminu/paper-pulse</a>), an automated nightly scientific literature ingestion, hybrid pgvector retrieval, and Neo4j citation-graph synthesis platform spanning ArXiv, Semantic Scholar, PubMed, and OpenAlex.
+                </li>
+                <li>
+                  Develops <strong class="_accent_qhq2s_148">multi-agent research pipelines</strong> integrating full-text PDF parsing, Cohere neural reranking, and iterative graph traversal for academic literature reviews with inline BibTeX verification.
+                </li>
+                <li>
+                  Maintains open-source full-stack and data engineering platforms including <strong class="_accent_qhq2s_148">Odyssey</strong> (<a href="https://github.com/aazminu/odyssey" target="_blank" rel="noreferrer" style="color: var(--accent);">github.com/aazminu/odyssey</a>), <strong class="_accent_qhq2s_148">LeadAI</strong> (<a href="https://github.com/aazminu/LeadAI" target="_blank" rel="noreferrer" style="color: var(--accent);">github.com/aazminu/LeadAI</a>), and <strong class="_accent_qhq2s_148">FarmData2</strong> (<a href="https://github.com/aazminu/FarmData2" target="_blank" rel="noreferrer" style="color: var(--accent);">github.com/aazminu/FarmData2</a>).
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="reveal visible _job_qhq2s_7">
+            <div class="_dateCol_qhq2s_23">
+              <span class="_date_qhq2s_23 nums">OPEN SOURCE</span>
+              <span class="_current_qhq2s_41">Active</span>
+            </div>
+            <div>
+              <div class="_top_qhq2s_59">
+                <h2 class="_company_qhq2s_66">
+                  PaperPulse Research Engine <span class="_startup_qhq2s_76">(Flagship Deliverable)</span>
+                </h2>
+              </div>
+              <div class="_sub_qhq2s_107">
+                <span class="_role_qhq2s_87">FastAPI · Next.js · PostgreSQL (pgvector) · Neo4j</span>
+                <span class="_location_qhq2s_97">Public Repository: github.com/aazminu/paper-pulse</span>
+              </div>
+              <ul class="_bullets_qhq2s_120">
+                <li>
+                  <strong class="_accent_qhq2s_148">Automated Multi-Database Ingestion:</strong> Nightly scheduled queries across ArXiv, Semantic Scholar, PubMed, and OpenAlex with PDF full-text extraction and chunk-level vector indexing.
+                </li>
+                <li>
+                  <strong class="_accent_qhq2s_148">Force-Directed Citation &amp; Concept Graph:</strong> Models papers, authors, institutions, and scientific concepts in Neo4j with automated cluster detection and agent-based multi-hop traversal.
+                </li>
+                <li>
+                  <strong class="_accent_qhq2s_148">Three-Mode Literature Synthesis:</strong> Generates Quick (Mermaid citation diagrams), Academic (multi-section reviews with BibTeX references), and Deep (iterative agentic graph exploration) syntheses.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 Researched Public Lab Websites (Unmodified Local Placeholders + Live Upstream Links) -->
+      <section class="_container_1aul7_1" id="reference-labs">
+        <div class="reveal visible sectionHead">
+          <p class="sectionLabel">03 / Publicly Accessible Research Lab &amp; Center Archive (10 Verified Sites)</p>
+          <h1 class="sectionTitle">Reference Lab Websites</h1>
+          <p style="margin-top: 12px; color: var(--muted); max-width: 72ch; font-size: 15px; line-height: 1.65;">
+            Below are 10 publicly accessible university research group, lab, and center websites (5 at Northwestern University + 5 across MIT, Stanford, and Caltech spanning CS/AI, Genomics, Chemistry/Materials, Quantum Physics, and Climate Science). Each site is archived verbatim without modification on this domain as a temporary placeholder alongside its live public URL and PI directory profile.
+          </p>
+        </div>
+
+        <div class="reveal visible _grid_1aul7_9">
+          <!-- Lab 1 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">01 · Multimodal Learning &amp; Language (MLL) Lab</h2>
+            <span class="_award_1aul7_42">Northwestern University · Dept. of Computer Science · PI: Prof. Manling Li</span>
+            <ul class="_tech_1aul7_51">
+              <li>Multimodal Foundation Models</li>
+              <li>Agentic RL</li>
+              <li>Embodied AI</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Develops intelligent language + vision/robotics models that reason, plan, and interact with the physical world, focusing on LLM/VLM multi-turn reinforcement learning and knowledge-grounded agents.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/01-mll-lab-nu/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://mll-lab-nu.github.io/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/li-manling.html" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 2 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">02 · Midwest Uncertainty Collective (MU Collective)</h2>
+            <span class="_award_1aul7_42">Northwestern University · Dept. of Computer Science · PIs: Prof. Jessica Hullman &amp; Prof. Matthew Kay</span>
+            <ul class="_tech_1aul7_51">
+              <li>Uncertainty Quantification</li>
+              <li>Bayesian Inference</li>
+              <li>Human-AI Decision Making</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Investigates statistical inference, interactive uncertainty visualization, and formal evaluation of human-in-the-loop AI decision workflows across scientific and clinical domains.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/02-mu-collective-nu/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://mucollective.northwestern.edu/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/hullman-jessica.html" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 3 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">03 · Health Aware Bits (HABits) Lab</h2>
+            <span class="_award_1aul7_42">Northwestern University · CS &amp; Feinberg School of Medicine · PI: Prof. Nabil Alshurafa</span>
+            <ul class="_tech_1aul7_51">
+              <li>Machine Learning for Healthcare</li>
+              <li>Wearable Sensor Analytics</li>
+              <li>Biomedical Signal Processing</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Designs passive mobile health (mHealth) sensing systems and machine learning pipelines to detect, predict, and prevent chronic health conditions from continuous physiological telemetry.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/03-habits-lab-nu/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://habitslab.github.io/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/affiliated/alshurafa-nabil.html" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 4 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">04 · Amaral Lab &amp; Complex Systems (NICO)</h2>
+            <span class="_award_1aul7_42">Northwestern University · ChBE &amp; Physics · PI: Prof. Luís A. Nunes Amaral</span>
+            <ul class="_tech_1aul7_51">
+              <li>Systems Biology</li>
+              <li>Computational Genomics</li>
+              <li>Complex Networks &amp; Science of Science</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Studies emergent organization in complex biological networks, multi-omics transcriptomic archives, clinical machine learning prognostics, and large-scale scientometrics.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/04-amaral-lab-nu/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://amaral.northwestern.edu/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/amaral-luis-a-nunes.html" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 5 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">05 · VAK Embodied Systems Lab</h2>
+            <span class="_award_1aul7_42">Northwestern University · CS &amp; ECE · PI: Prof. Nivedita Arora</span>
+            <ul class="_tech_1aul7_51">
+              <li>Energy-Autonomous Embodied Systems</li>
+              <li>Bio-Electronic Sensing Materials</li>
+              <li>Sustainable Quantum Computing</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Builds battery-free, soft-electronic and bio-electronic sensing systems, low-power embedded ML interfaces, and sustainable quantum computing architectures.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/05-vak-embodied-nu/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://embodiedsystem.com/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/arora-nivedita.html" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 6 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">06 · MIT HAN Lab</h2>
+            <span class="_award_1aul7_42">Massachusetts Institute of Technology · EECS · PI: Prof. Song Han</span>
+            <ul class="_tech_1aul7_51">
+              <li>Efficient Generative AI</li>
+              <li>LLM Quantization &amp; Compression</li>
+              <li>AI Hardware-System Co-Design</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Pioneers efficient deep learning algorithms and hardware-aware neural architectures (AWQ, SmoothQuant, StreamingLLM, SANA, VILA) for high-throughput foundation model inference.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/06-mit-han-lab/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://hanlab.mit.edu/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://www.eecs.mit.edu/people/song-han/" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 7 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">07 · Stanford Kundaje Lab</h2>
+            <span class="_award_1aul7_42">Stanford University · Dept. of Genetics &amp; CS · PI: Prof. Anshul Kundaje</span>
+            <ul class="_tech_1aul7_51">
+              <li>Regulatory Genomics</li>
+              <li>Chromatin Accessibility Modeling</li>
+              <li>Interpretable Deep Learning</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Develops mechanistic deep learning models (ChromBPNet, DeepLIFT, TF-MoDISco) to decode cis-regulatory syntax and non-coding disease variants from single-cell and bulk multi-omics data.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/07-stanford-kundaje-lab/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://kundajelab.github.io/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://kundajelab.github.io/people/" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 8 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">08 · MIT Kulik Research Group</h2>
+            <span class="_award_1aul7_42">Massachusetts Institute of Technology · ChemE &amp; Chemistry · PI: Prof. Heather J. Kulik</span>
+            <ul class="_tech_1aul7_51">
+              <li>Computational Catalysis</li>
+              <li>Density Functional Theory (DFT)</li>
+              <li>ML for MOF &amp; Materials Discovery</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Combines first-principles quantum chemistry, density functional theory, and autonomous machine learning workflows to accelerate transition-metal catalyst and metal-organic framework discovery.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/08-mit-kulik-group/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="http://hjkgrp.mit.edu/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://cheme.mit.edu/profile/heather-j-kulik/" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 9 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">09 · MIT Engineering Quantum Systems (EQuS)</h2>
+            <span class="_award_1aul7_42">Massachusetts Institute of Technology · Physics, EECS &amp; RLE · PI: Prof. William D. Oliver</span>
+            <ul class="_tech_1aul7_51">
+              <li>Superconducting Qubits</li>
+              <li>Quantum Error Correction</li>
+              <li>Circuit QED &amp; 2D Quantum Materials</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Engineers fault-tolerant superconducting quantum processors, high-coherence 3D-integrated qubit architectures, and real-time quantum error correction control systems.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/09-mit-equs-group/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://equs.mit.edu/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://www.eecs.mit.edu/people/william-d-oliver/" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+
+          <!-- Lab 10 -->
+          <article class="_card_1aul7_24">
+            <h2 class="_name_1aul7_33">10 · Caltech Climate Dynamics Group &amp; CliMA</h2>
+            <span class="_award_1aul7_42">California Institute of Technology · Environmental Science &amp; Engineering · PI: Prof. Tapio Schneider</span>
+            <ul class="_tech_1aul7_51">
+              <li>Physics-Informed Earth System Modeling</li>
+              <li>Cloud Turbulence Parameterization</li>
+              <li>Bayesian Climate Data Assimilation</li>
+            </ul>
+            <p class="_description_1aul7_63">
+              Builds next-generation Earth system models (CliMA) that fuse physical conservation laws with machine learning and satellite/in-situ observations to reduce uncertainty in extreme weather and climate projections.
+            </p>
+            <div class="lab-ref-actions">
+              <a href="../labs/10-caltech-climate-dynamics/" class="_link_1aul7_72">local snapshot ↗</a>
+              <a href="https://climate-dynamics.org/" target="_blank" rel="noreferrer" class="_link_1aul7_72">live site ↗</a>
+              <a href="https://climate-dynamics.org/people/" target="_blank" rel="noreferrer" class="_link_1aul7_72">pi profile ↗</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="_footer_141uw_1">
+        <div class="_inner_141uw_5">
+          <p class="_message_141uw_11">Collaborate.</p>
+          <a href="mailto:erlokix@gmail.com" class="_email_141uw_22">erlokix@gmail.com</a>
+          <div class="_links_141uw_38">
+            <a href="https://github.com/aazminu" target="_blank" rel="noreferrer">github.com/aazminu</a>
+            <a href="https://github.com/aazminu/paper-pulse" target="_blank" rel="noreferrer">github.com/aazminu/paper-pulse</a>
+            <a href="https://www.linkedin.com/in/aazminu/" target="_blank" rel="noreferrer">linkedin.com/in/aazminu</a>
+            <a href="../labs/">10-lab-archive</a>
+            <a href="../">main-portfolio</a>
+          </div>
+          <p class="_copy_141uw_60">Agentic Science &amp; Knowledge Systems Lab · Abdullah Azmi · 2026</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (() => {
+        const stored = localStorage.getItem('theme') || 'light';
+        document.body.setAttribute('data-theme', stored);
+        const btn = document.getElementById('theme-toggle-btn');
+        const label = document.getElementById('theme-toggle-label');
+        const syncLabel = (theme) => {
+          if (label) label.textContent = theme === 'light' ? 'dark' : 'light';
+        };
+        syncLabel(stored);
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const current = document.body.getAttribute('data-theme') || 'light';
+            const next = current === 'light' ? 'dark' : 'light';
+            document.body.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            syncLabel(next);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -139,11 +139,241 @@
     footer.before(section);
   }
 
+  const referenceLabs = [
+    {
+      name: '01 · Multimodal Learning & Language (MLL) Lab',
+      award: 'Northwestern University · CS · PI: Prof. Manling Li',
+      tech: ['Multimodal Foundation Models', 'Agentic RL', 'Embodied AI'],
+      description: 'Develops language + vision/robotics models that reason, plan, and interact with the physical world, focusing on multi-turn RL and knowledge-grounded agents.',
+      localUrl: './labs/01-mll-lab-nu/',
+      liveUrl: 'https://mll-lab-nu.github.io/'
+    },
+    {
+      name: '02 · Midwest Uncertainty Collective (MU Collective)',
+      award: 'Northwestern University · CS · PIs: Prof. Jessica Hullman & Prof. Matthew Kay',
+      tech: ['Uncertainty Quantification', 'Bayesian Inference', 'Human-AI Decision Making'],
+      description: 'Investigates statistical inference, interactive uncertainty visualization, and formal evaluation of human-in-the-loop AI decision workflows.',
+      localUrl: './labs/02-mu-collective-nu/',
+      liveUrl: 'https://mucollective.northwestern.edu/'
+    },
+    {
+      name: '03 · Health Aware Bits (HABits) Lab',
+      award: 'Northwestern University · CS & Preventive Medicine · PI: Prof. Nabil Alshurafa',
+      tech: ['Machine Learning for Healthcare', 'Wearable Sensor Analytics', 'Biomedical Signals'],
+      description: 'Designs passive mobile health sensing systems and machine learning pipelines to detect, predict, and prevent chronic health conditions.',
+      localUrl: './labs/03-habits-lab-nu/',
+      liveUrl: 'https://habitslab.github.io/'
+    },
+    {
+      name: '04 · Amaral Lab & Complex Systems (NICO)',
+      award: 'Northwestern University · ChBE & Physics · PI: Prof. Luís A. Nunes Amaral',
+      tech: ['Systems Biology', 'Computational Genomics', 'Complex Biological Networks'],
+      description: 'Studies emergent organization in complex biological networks, multi-omics transcriptomic archives, clinical ML prognostics, and science of science.',
+      localUrl: './labs/04-amaral-lab-nu/',
+      liveUrl: 'https://amaral.northwestern.edu/'
+    },
+    {
+      name: '05 · VAK Embodied Systems Lab',
+      award: 'Northwestern University · CS & ECE · PI: Prof. Nivedita Arora',
+      tech: ['Energy-Autonomous Embodied Systems', 'Bio-Electronic Materials', 'Sustainable Quantum'],
+      description: 'Builds battery-free, soft-electronic and bio-electronic sensing systems, low-power embedded ML interfaces, and sustainable quantum architectures.',
+      localUrl: './labs/05-vak-embodied-nu/',
+      liveUrl: 'https://embodiedsystem.com/'
+    },
+    {
+      name: '06 · MIT HAN Lab',
+      award: 'Massachusetts Institute of Technology · EECS · PI: Prof. Song Han',
+      tech: ['Efficient Generative AI', 'LLM Quantization', 'Hardware-System Co-Design'],
+      description: 'Pioneers efficient deep learning algorithms and hardware-aware neural architectures (AWQ, SmoothQuant, StreamingLLM, SANA, VILA).',
+      localUrl: './labs/06-mit-han-lab/',
+      liveUrl: 'https://hanlab.mit.edu/'
+    },
+    {
+      name: '07 · Stanford Kundaje Lab',
+      award: 'Stanford University · Genetics & CS · PI: Prof. Anshul Kundaje',
+      tech: ['Regulatory Genomics', 'Chromatin Accessibility', 'Interpretable Deep Learning'],
+      description: 'Develops mechanistic deep learning models (ChromBPNet, DeepLIFT, TF-MoDISco) to decode cis-regulatory syntax and non-coding disease variants.',
+      localUrl: './labs/07-stanford-kundaje-lab/',
+      liveUrl: 'https://kundajelab.github.io/'
+    },
+    {
+      name: '08 · MIT Kulik Research Group',
+      award: 'Massachusetts Institute of Technology · ChemE & Chemistry · PI: Prof. Heather J. Kulik',
+      tech: ['Computational Catalysis', 'Density Functional Theory', 'ML Materials Discovery'],
+      description: 'Combines first-principles quantum chemistry, DFT, and autonomous machine learning workflows to accelerate transition-metal catalyst and MOF discovery.',
+      localUrl: './labs/08-mit-kulik-group/',
+      liveUrl: 'http://hjkgrp.mit.edu/'
+    },
+    {
+      name: '09 · MIT Engineering Quantum Systems (EQuS)',
+      award: 'Massachusetts Institute of Technology · Physics & EECS · PI: Prof. William D. Oliver',
+      tech: ['Superconducting Qubits', 'Quantum Error Correction', 'Circuit QED'],
+      description: 'Engineers fault-tolerant superconducting quantum processors, high-coherence 3D-integrated qubit architectures, and real-time QEC control systems.',
+      localUrl: './labs/09-mit-equs-group/',
+      liveUrl: 'https://equs.mit.edu/'
+    },
+    {
+      name: '10 · Caltech Climate Dynamics Group & CliMA',
+      award: 'California Institute of Technology · ESE & GPS · PI: Prof. Tapio Schneider',
+      tech: ['Physics-Informed Earth Modeling', 'Cloud Turbulence', 'Climate Data Assimilation'],
+      description: 'Builds next-generation Earth system models (CliMA) fusing physical conservation laws with machine learning and global Earth observations.',
+      localUrl: './labs/10-caltech-climate-dynamics/',
+      liveUrl: 'https://climate-dynamics.org/'
+    }
+  ];
+
+  function addResearchLabSection(footer) {
+    if (document.getElementById('research-lab')) return;
+
+    const section = document.createElement('section');
+    section.id = 'research-lab';
+    section.className = 'portfolio-lab';
+    section.setAttribute('aria-labelledby', 'portfolio-lab-title');
+
+    const head = document.createElement('div');
+    head.className = 'sectionHead';
+    head.append(createText('p', 'sectionLabel', 'Scientific Workflows & Reference Archive'));
+    const title = createText('h1', 'sectionTitle', 'Research Lab & 10 Public Labs');
+    title.id = 'portfolio-lab-title';
+    head.append(title);
+    section.append(head);
+
+    const featured = document.createElement('article');
+    featured.className = 'portfolio-featured';
+    featured.setAttribute('aria-label', 'Agentic Science Lab Overview');
+
+    const main = document.createElement('div');
+    main.className = 'portfolio-featured__main';
+    const kicker = document.createElement('p');
+    kicker.className = 'portfolio-featured__kicker';
+    kicker.append(
+      createText('span', 'portfolio-featured__label', 'RESEARCH GROUP — COMPUTATIONAL / DRY LAB'),
+      createText('span', 'portfolio-featured__index', 'LAB / 10 ARCHIVES')
+    );
+
+    const titleRow = document.createElement('div');
+    titleRow.className = 'portfolio-featured__title-row';
+    titleRow.append(
+      createText('h2', 'portfolio-featured__title', 'Agentic Science & Knowledge Systems Lab'),
+      createText('span', 'portfolio-featured__status', 'Non-Commercial Research')
+    );
+
+    const description = createText(
+      'p',
+      'portfolio-featured__description',
+      'Investigating autonomous literature-to-hypothesis synthesis, multi-hop citation provenance (PaperPulse), and cross-database grounding across ArXiv, PubMed, OpenAlex, AlphaGenome, and UniProt using multi-agent workflows. Includes 10 verbatim-archived public research lab websites hosted on this domain.'
+    );
+
+    const techList = document.createElement('ul');
+    techList.className = 'portfolio-featured__tech';
+    for (const tag of ['Scientific Knowledge Graphs', 'Multi-Agent Workflows', 'Automated Literature Synthesis', 'Neo4j & pgvector', 'Google Antigravity']) {
+      techList.append(createText('li', '', tag));
+    }
+
+    const actions = document.createElement('div');
+    actions.className = 'portfolio-lab__actions';
+    const labLink = createText('a', 'portfolio-lab__btn', 'Open Dedicated Lab Page (/lab/) ↗');
+    labLink.href = './lab/';
+    const archiveLink = createText('a', 'portfolio-lab__btn', 'Browse 10 Saved Lab Websites (/labs/) ↗');
+    archiveLink.href = './labs/';
+    actions.append(labLink, archiveLink);
+
+    main.append(kicker, titleRow, description, techList, actions);
+
+    const aside = document.createElement('aside');
+    aside.className = 'portfolio-featured__meta';
+    const metaRows = [
+      ['METHODOLOGY', 'Computational / Dry Lab'],
+      ['PRIMARY FIELD', 'CS, Data Science, AI & ML'],
+      ['SPECIALIZATION', 'Knowledge Graphs & Agentic Science'],
+      ['SAVED LAB SITES', '10 Unmodified Snapshots (/labs/)']
+    ];
+    for (const [label, value] of metaRows) {
+      const row = document.createElement('div');
+      row.className = 'portfolio-featured__meta-row';
+      row.append(createText('span', 'portfolio-featured__meta-label', label));
+      row.append(createText('strong', 'portfolio-featured__meta-value', value));
+      aside.append(row);
+    }
+    aside.append(createText('span', 'portfolio-featured__mark', 'LAB.'));
+    featured.append(main, aside);
+    section.append(featured);
+
+    const grid = document.createElement('div');
+    grid.className = '_grid_1aul7_9';
+    for (const lab of referenceLabs) {
+      const card = document.createElement('article');
+      card.className = '_card_1aul7_24';
+      card.append(createText('h2', '_name_1aul7_33', lab.name));
+      card.append(createText('span', '_award_1aul7_42', lab.award));
+      const ul = document.createElement('ul');
+      ul.className = '_tech_1aul7_51';
+      for (const item of lab.tech) {
+        ul.append(createText('li', '', item));
+      }
+      card.append(ul);
+      card.append(createText('p', '_description_1aul7_63', lab.description));
+
+      const linksRow = document.createElement('div');
+      linksRow.className = 'portfolio-lab__card-links';
+      const snapA = createText('a', '_link_1aul7_72', 'hosted placeholder ↗');
+      snapA.href = lab.localUrl;
+      const liveA = createText('a', '_link_1aul7_72', 'live url ↗');
+      liveA.href = lab.liveUrl;
+      liveA.target = '_blank';
+      liveA.rel = 'noreferrer';
+      linksRow.append(snapA, liveA);
+      card.append(linksRow);
+      grid.append(card);
+    }
+    section.append(grid);
+
+    const fieldSection = document.querySelector('.portfolio-field');
+    if (fieldSection) {
+      fieldSection.before(section);
+    } else {
+      footer.before(section);
+    }
+
+    const navLinks = document.querySelector('._links_p88qd_61');
+    if (navLinks && !navLinks.querySelector('[data-lab-nav]')) {
+      const labBtn = createText('button', '', 'Research Lab');
+      labBtn.setAttribute('data-lab-nav', 'true');
+      labBtn.addEventListener('click', () => {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      const resumeAnchor = navLinks.querySelector('a');
+      if (resumeAnchor) {
+        resumeAnchor.before(labBtn);
+      } else {
+        navLinks.append(labBtn);
+      }
+    }
+
+    const heroLinks = document.querySelector('._metaLinks_1gba7_107');
+    if (heroLinks && !heroLinks.querySelector('[data-lab-hero]')) {
+      const heroLabLink = createText('a', '', 'research-lab');
+      heroLabLink.href = './lab/';
+      heroLabLink.setAttribute('data-lab-hero', 'true');
+      const heroLabsArchive = createText('a', '', '10-labs');
+      heroLabsArchive.href = './labs/';
+      const toggleBtn = heroLinks.querySelector('button');
+      if (toggleBtn) {
+        toggleBtn.before(heroLabLink, heroLabsArchive);
+      } else {
+        heroLinks.append(heroLabLink, heroLabsArchive);
+      }
+    }
+  }
+
   function enhance() {
     const projects = document.getElementById('projects');
     const footer = document.getElementById('footer');
     if (projects) addFeaturedProject(projects);
-    if (footer) addFieldGallery(footer);
+    if (footer) {
+      addFieldGallery(footer);
+      addResearchLabSection(footer);
+    }
   }
 
   const root = document.getElementById('root');
@@ -152,3 +382,4 @@
   observer.observe(root, { childList: true, subtree: true });
   enhance();
 })();
+
