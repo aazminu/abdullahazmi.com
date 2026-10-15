@@ -1,4 +1,4 @@
-# Abdullah Azmi · CGAS Lab & Systems Engineering Catalog (16 Systems)
+# Abdullah Azmi · CGAS Lab & Systems Engineering Catalog (28 Systems)
 
 **Lead Researcher & Principal Systems Architect:** Abdullah Azmi (`m4u5t4@u.northwestern.edu` · `erlokix@gmail.com`)  
 **Affiliations:** Computational Genomics & Agentic Systems (CGAS) Lab · Department of Computer Science & Northwestern Institute on Complex Systems (NICO), Northwestern University  
@@ -8,10 +8,10 @@
 
 ## Architectural Synthesis Overview
 
-This specification documents the 16 scientific, full-stack, distributed-data, applied-ML, and open-source systems showcased on [abdullahazmi.com](https://abdullahazmi.com/). The portfolio unifies two complementary engineering tracks:
+This specification documents the 28 scientific, full-stack, distributed-data, applied-ML, and open-source systems showcased on [abdullahazmi.com](https://abdullahazmi.com/). The portfolio unifies two complementary engineering tracks:
 
 1. **Computational Genomics & Agentic Systems (CGAS) Lab Research Suite (Systems 01–04):** Autonomous multi-hop scientific literature synthesis (`PaperPulse`), base-resolution cis-regulatory and splice-disruption variant attribution (`ChromAlphaGenome`), exact recursive Bayesian state-space trajectory filtering (`BayesKalmanTrace`), and AlphaFold 3 PAE domain partitioning coupled with semiempirical tight-binding quantum pocket energetics (`FoldEnergetics-xTB`).
-2. **Production Full-Stack, Distributed Data, Applied ML & Open-Source Systems (Systems 05–16):** Idempotent container-yard inventory and month-end billing (`Airtight Container`), bounded asynchronous entity enrichment (`LeadAI`), reviewed open-source platform engineering (`Khoury Odyssey`, `Mermaid`, `FarmData2`), distributed tabular validation (`ScrubData`), cycle-accurate processor simulation (`RISC-V RV32I`), streaming financial alpha pipelines (`Spark/Kafka Dividend Capture`), spectral world-model compression (`LeWM SVD`), low-latency ML moderation (`DistilBERT`), multi-service ChatOps orchestration, and real-time WebSocket collaborative filtering.
+2. **Production Full-Stack, Distributed Data, Applied ML & Open-Source Systems (Systems 05–28):** Idempotent container-yard inventory and month-end billing (`Airtight Container`), bounded asynchronous entity enrichment (`LeadAI`), reviewed open-source platform engineering (`Khoury Odyssey`, `Mermaid`, `FarmData2`), distributed tabular validation (`ScrubData`), cycle-accurate processor simulation (`RISC-V RV32I`), streaming financial alpha pipelines (`Spark/Kafka Dividend Capture`), spectral world-model compression (`LeWM SVD`), low-latency ML moderation (`DistilBERT`), multi-service ChatOps orchestration, real-time WebSocket collaborative filtering, S&P 500 conviction optimization, sliding-window RAG study generation, geospatial hazard classification, GhostFaceNet selfie search, variable-order Markov musical synthesis (`markov-music`), NYC BBL geospatial valuation (`NYC-Property-Scout`), SSE Docker fleet telemetry (`nitro-lab`), hybrid BM25+vector RRF search (`Watch-Engine`), deterministic CPT/NCCI medical bill auditing (`ClaimLess`), and quantitative portfolio simulation (`finsim`).
 
 ---
 
