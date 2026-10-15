@@ -21,6 +21,19 @@ All core research packages, full-stack applications, and open-source platform co
 | [`aazminu/odyssey`](https://github.com/aazminu/odyssey) | University Learning Platform (MDX/React) | Next.js, TypeScript, Strapi CMS, PostgreSQL; recursive nested block preview fix & Jest regression test suites |
 | [`aazminu/mermaid`](https://github.com/aazminu/mermaid) | Declarative Diagramming & Charting Engine | TypeScript, SVG/D3 rendering, Vitest & Cypress regression suites for configurable bar-chart data labels & journey layout |
 | [`aazminu/FarmData2`](https://github.com/aazminu/FarmData2) | Operational Recordkeeping Platform | Node.js, Vue.js, PostgreSQL, Docker, Cypress end-to-end integration test suites |
+| [`aazminu/data-cleaning-hackumass`](https://github.com/aazminu/data-cleaning-hackumass) | ScrubData Tabular Cleaning Engine | Node.js, AWS S3, AWS Glue, statistical median/mode imputation & MAD z-score outlier winsorization |
+| [`aazminu/python-riscv-simulator`](https://github.com/aazminu/python-riscv-simulator) | Cycle-Accurate RISC-V RV32I Simulator | Python 3.11+, single-cycle & 5-stage pipelined RV32I cores, EX/MEM/WB forwarding, load-use stalling, `pytest` suite |
+| [`aazminu/dividend-capture-spark`](https://github.com/aazminu/dividend-capture-spark) | Dividend Capture & Streaming Alpha | Python, Apache Spark, SPY-adjusted drop ratios, k-NN/centroid sector imputation, temporal-split GBDT scoring |
+| [`aazminu/world-model-compression-mpc`](https://github.com/aazminu/world-model-compression-mpc) | Low-Rank SVD World-Model Compression | PyTorch, Weight SVD vs. Activation-Aware SVD (ASVD), CEM MPC on `TwoRoom`/`PushT`, Hybrid KL + Elite distillation |
+| [`aazminu/adaptive-ml-moderation`](https://github.com/aazminu/adaptive-ml-moderation) | Adaptive Real-Time ML Moderation | Python, hybrid word/char TF-IDF & transformer cascade, priority triage queue, leakage-safe splitting, PSI drift monitor |
+| [`aazminu/agentic-scrape-repair`](https://github.com/aazminu/agentic-scrape-repair) | Agentic Scrape-Repair & ChatOps Sync | Python, self-healing DOM selector repair gated on schema verification, idempotent Slack-to-ServiceNow/Rally/GitHub sync |
+| [`aazminu/movie-recc`](https://github.com/aazminu/movie-recc) | WebSocket Group Movie Recommender | Python, FastAPI WebSockets, React, residual bias-corrected collaborative filtering & equal member weighting |
+| [`aazminu/sp500_platform`](https://github.com/aazminu/sp500_platform) | S&P 500 Portfolio Analytics & Optimizer | Python, React, Sharpe/Sortino/drawdown analytics, capped water-filling LLM conviction weights, Alpaca rebalancing |
+| [`aazminu/AP-Study-Guide-Generator`](https://github.com/aazminu/AP-Study-Guide-Generator) | Sliding-Window RAG Study Guide Generator | Python, FAISS, overlapping word-window chunking, zero-norm-safe cosine similarity, Recall@K/MRR/nDCG@K evaluation |
+| [`aazminu/Environmental-Disaster-Classifier`](https://github.com/aazminu/Environmental-Disaster-Classifier) | Spatiotemporal Disaster Classifier | Python, 10-year NASA EONET dataset, 3D unit-sphere geospatial projection, inverse-frequency weighted k-NN |
+| [`aazminu/grab-pic`](https://github.com/aazminu/grab-pic) | Event Photo Sharing & Selfie Search | Java Spring Boot, Next.js, Python GhostFaceNet + RetinaFace worker, cosine-similarity embedding matcher |
+| [`aazminu/comic-subscription`](https://github.com/aazminu/comic-subscription) | Marvel Series Tracker & Delta Notifier | Node.js, Express, Marvel API hash authentication, chapter-delta detection & automated email alerts |
+| [`aazminu/motorcycle-rideability-index`](https://github.com/aazminu/motorcycle-rideability-index) | Motorcycle Rideability Scoring Service | Node.js, Express, weather-driven rideability score clamping (`[0, 10]`), snow detection & risk tier classification |
 
 ---
 

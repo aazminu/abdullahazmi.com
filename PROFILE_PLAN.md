@@ -94,16 +94,18 @@ This specification documents the 16 scientific, full-stack, distributed-data, ap
 ## Part III · Systems Architecture, Distributed Data & Applied ML Suite (10–16)
 
 ### 10. ScrubData — Distributed Tabular Cleaning Engine
+- **Repository:** [`github.com/aazminu/data-cleaning-hackumass`](https://github.com/aazminu/data-cleaning-hackumass)
 - **Category:** Data Operations & Distributed ETL
 - **Stack:** Python, Node.js/Express, PostgreSQL, Apache Spark / Databricks, AWS S3, Pandas / Polars
 - **Problem & Architecture:**
   - Recurring operational datasets frequently arrive with mixed date formats, schema drift, duplicate composite keys, and extreme numerical outliers that corrupt downstream SQL reporting and ML training.
   - **ScrubData** provides an upload $\rightarrow$ schema inference $\rightarrow$ distributed transformation $\rightarrow$ audit-report pipeline over **100,000+ row CSV/Parquet files**:
     1. **Automated Schema & Type Inference:** Detects column types, null fractions, and candidate primary/composite keys.
-    2. **Deterministic Reconciliation:** Deduplicates records by configurable composite keys (`keep='latest_timestamp'`), normalizes currency/date strings, and applies robust **median/IQR** or **Z-score ($\lvert z \rvert > 3.0$)** anomaly isolation.
+    2. **Deterministic Reconciliation:** Deduplicates records by configurable composite keys (`keep='latest_timestamp'`), normalizes currency/date strings, and applies robust **median/MAD/IQR** or **Z-score ($\lvert z \rvert > 3.0$)** anomaly isolation.
     3. **Verification & Exception Reporting:** Emits both the cleaned dataset and a structured reconciliation manifest detailing exact row counts modified, quarantined anomalies, and column-level KS-test distribution shifts.
 
 ### 11. Cycle-Accurate RISC-V (RV32I) Pipelined Simulator
+- **Repository:** [`github.com/aazminu/python-riscv-simulator`](https://github.com/aazminu/python-riscv-simulator)
 - **Category:** Computer Architecture & Systems Programming
 - **Stack:** Python 3.11+, C, RISC-V RV32I Base Integer ISA, 5-Stage Pipeline (`IF`, `ID`, `EX`, `MEM`, `WB`), Golden-Trace Verification
 - **Problem & Architecture:**
@@ -114,40 +116,45 @@ This specification documents the 16 scientific, full-stack, distributed-data, ap
     - **Control Hazard Flushing:** Flushes misfetched `IF/ID` pipeline latches on taken branches (`BEQ`/`BNE`/`JAL`) and verifies final 32-register (`x0`–`x31`) and byte-addressed data-memory dumps bit-for-bit against golden architectural traces.
 
 ### 12. Market-Scale Dividend Capture & Streaming Alpha
+- **Repository:** [`github.com/aazminu/dividend-capture-spark`](https://github.com/aazminu/dividend-capture-spark)
 - **Category:** Distributed Data Engineering & Quantitative ML
 - **Stack:** Apache Spark, PySpark, HDFS, Apache Kafka Structured Streaming, Gradient-Boosted Trees (Spark MLlib / XGBoost), Parquet
 - **Problem & Architecture:**
   - Analyzes **165,000+ historical dividend declarations** joined with **5 years of daily OHLCV US equity bars** across **HDFS / Apache Spark** to quantify ex-dividend price-drop recovery dynamics and transaction-cost-adjusted capture alpha.
-  - Engineers rolling liquidity, implied volatility proxy, payout ratio, and sector-momentum features to train a calibrated **Gradient-Boosted Tree (GBT)** classifier predicting 5-day post-ex-dividend recovery probability.
+  - Engineers SPY-adjusted drop ratios, k-NN/centroid sector imputation, rolling liquidity, and payout ratio features to train a temporal-split **Gradient-Boosted Tree (GBT)** classifier predicting post-ex-dividend recovery probability.
   - Connects a live **Apache Kafka $\rightarrow$ Spark Structured Streaming** consumer that scores incoming market ticks and dividend announcements in real time with watermarked stateful aggregations.
 
 ### 13. Low-Rank SVD World-Model Compression (LeWM)
+- **Repository:** [`github.com/aazminu/world-model-compression-mpc`](https://github.com/aazminu/world-model-compression-mpc)
 - **Category:** Deep Learning Systems & Model Predictive Control (MPC)
 - **Stack:** PyTorch, Singular Value Decomposition (SVD), Activation-Aware SVD, Cross-Entropy Method (CEM) MPC, `TwoRoom` & `PushT` Continuous Control
 - **Problem & Architecture:**
   - Latent world models (`LeWM`) enable sample-efficient planning via **Cross-Entropy Method (CEM) Model Predictive Control (MPC)**, but dense MLP/Transformer transition predictors incur high per-rollout FLOPs and memory bandwidth when evaluating thousands of candidate action trajectories per control step.
-  - Applies post-training **uniform spectral SVD truncation** ($W \approx U_k \Sigma_k V_k^\top$) and **activation-aware SVD** (weighting singular vectors by empirical activation covariance $\Sigma_{\text{act}}^{1/2}$) across latent transition layers.
+  - Applies post-training **uniform spectral SVD truncation** ($W \approx U_k \Sigma_k V_k^\top$), **activation-aware SVD (ASVD)**, and **Hybrid Forward-KL + Elite-Classification distillation** across latent transition layers.
   - Maps the **Rank-vs-Planning-Reward Pareto Frontier** on continuous-action `TwoRoom` navigation and `PushT` manipulation benchmarks, retaining **>96% planning success rate at 45% parameter compression** while accelerating batched CEM horizon rollouts by **1.72×**.
 
 ### 14. Adaptive Real-Time ML Moderation & Drift Engine
+- **Repository:** [`github.com/aazminu/adaptive-ml-moderation`](https://github.com/aazminu/adaptive-ml-moderation)
 - **Category:** Applied NLP, Streaming Inference & MLOps
 - **Stack:** PyTorch, HuggingFace `DistilBERT`, Scikit-Learn TF-IDF Baselines, FastAPI, MinIO Object Storage, Active Learning
 - **Problem & Architecture:**
   - Delivers **sub-150ms p95 latency** multi-label toxicity and policy-compliance classification trained and evaluated on **160,000+ labeled comments**.
-  - Pairs a quantized **fine-tuned `DistilBERT`** encoder with a fast calibrated **TF-IDF + Logistic Regression** cascade so high-confidence benign traffic exits early in `<8ms` while ambiguous samples route through the transformer.
+  - Pairs a quantized **fine-tuned `DistilBERT`** encoder with a fast calibrated **word/char TF-IDF + Logistic Regression** cascade, priority triage queue, leakage-safe splitting, and Population Stability Index (PSI) drift monitor.
   - Stores immutable model checkpoints and evaluation manifests in **MinIO** and routes high-entropy predictions ($H(p) > \tau$) into a human-in-the-loop active-learning retraining queue to mitigate covariate shift.
 
 ### 15. Multi-Service ChatOps Workflow & Incident Bot
+- **Repository:** [`github.com/aazminu/agentic-scrape-repair`](https://github.com/aazminu/agentic-scrape-repair)
 - **Category:** Enterprise Integrations & Event-Driven Automation
 - **Stack:** Python 3.11+, FastAPI, Slack Bolt SDK, GitHub Webhooks & Actions API, PostgreSQL, Idempotent State Machine
 - **Problem & Architecture:**
-  - Eliminates manual context switching across messaging, source control, and change-management ticketing by bridging **Slack**, **GitHub Issues/PRs**, and operational incident queues.
+  - Eliminates manual context switching across messaging, source control, and change-management ticketing by bridging **Slack**, **GitHub Issues/PRs**, **ServiceNow**, and **Rally** alongside a self-healing DOM selector repair engine gated on live schema verification.
   - Parses structured slash-command and modal requests, validates service-level preconditions, provisions linked tickets and branches, syncs merged PR changelogs, and broadcasts deployment readiness signals.
   - Enforces webhook delivery deduplication via `X-GitHub-Delivery` / Slack event IDs in PostgreSQL, reducing end-to-end change-request handling latency by **95%** (from ~22 minutes of manual coordination to `<60 seconds`).
 
 ### 16. Real-Time WebSocket Group Recommender & Matrix Factorization
+- **Repository:** [`github.com/aazminu/movie-recc`](https://github.com/aazminu/movie-recc)
 - **Category:** Real-Time Distributed State & Collaborative Filtering
 - **Stack:** PyTorch, FastAPI, WebSockets, Neural Matrix Factorization, Redis Pub/Sub, React & TypeScript
 - **Problem & Architecture:**
   - Multi-user group recommendation engine where 2–12 participants join shared rooms via **FastAPI WebSockets** (`<200ms` state synchronization latency across 10+ concurrent rooms).
-  - Combines learned **PyTorch Neural Matrix Factorization (NMF)** user/item embeddings with an interactive **Pareto-fair group utility aggregator** (balancing mean group affinity against least-misery $\min_{u \in G} s(u, i)$ fairness constraints) that updates live rankings immediately as members swipe or re-weight genre constraints.
+  - Combines learned **PyTorch Neural Matrix Factorization (NMF)** user/item embeddings with residual bias correction and an interactive **Pareto-fair group utility aggregator** (balancing mean group affinity against least-misery $\min_{u \in G} s(u, i)$ fairness constraints) that updates live rankings immediately as members swipe or re-weight genre constraints.
