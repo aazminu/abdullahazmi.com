@@ -65,6 +65,8 @@ No build step is required to serve the static site. From the repository root:
 
 ```powershell
 python -m http.server 8000
+node --test tests/portfolio.test.mjs
 ```
 
 Then visit `http://127.0.0.1:8000/` and `http://127.0.0.1:8000/lab/`.
+
