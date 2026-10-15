@@ -10,12 +10,12 @@ Official researcher portfolio and **Computational Genomics & Agentic Systems (CG
 - **Main Researcher & Engineering Portfolio:** [https://abdullahazmi.com/](https://abdullahazmi.com/)
 - **CGAS Research Lab Portal:** [https://abdullahazmi.com/lab/](https://abdullahazmi.com/lab/) (mirrored at [`/research/`](https://abdullahazmi.com/research/))
 - **Curriculum Vitae / Engineering Resume (PDF):** [`assets/abdullah-azmi-resume.pdf`](https://abdullahazmi.com/assets/abdullah-azmi-resume.pdf)
-- **16-System Architectural Catalog:** [`PROFILE_PLAN.md`](./PROFILE_PLAN.md)
+- **28-System Architectural Catalog:** [`PROFILE_PLAN.md`](./PROFILE_PLAN.md)
 - **Dataset & Benchmark Provenance:** [`provenance.md`](./provenance.md)
 
 ---
 
-## Featured Systems & Open-Source Repositories (16 Total)
+## Featured Systems & Open-Source Repositories (28 Standalone Repositories)
 
 ### I. CGAS Lab Flagship Scientific Packages (`github.com/aazminu`)
 1. **[`aazminu/paper-pulse`](https://github.com/aazminu/paper-pulse)** — Autonomous nightly scientific literature ingestion across ArXiv, Semantic Scholar, PubMed, and OpenAlex with hybrid PostgreSQL (`pgvector`) dense retrieval, Neo4j multi-hop citation-concept knowledge graphs, and claim-verified daily synthesis.
@@ -46,6 +46,12 @@ Official researcher portfolio and **Computational Genomics & Agentic Systems (CG
 20. **[`aazminu/grab-pic`](https://github.com/aazminu/grab-pic)** — Event photo sharing platform pairing a Spring Boot REST API with a GhostFaceNet + RetinaFace cosine-similarity selfie search worker.
 21. **[`aazminu/comic-subscription`](https://github.com/aazminu/comic-subscription)** — Marvel comic series tracker and chapter-delta email notification service.
 22. **[`aazminu/motorcycle-rideability-index`](https://github.com/aazminu/motorcycle-rideability-index)** — Weather-driven motorcycle rideability index API and severe-weather risk classification service.
+23. **[`aazminu/markov-music`](https://github.com/aazminu/markov-music)** — Variable-order Markov chain musical sequence generator with lower-order suffix backoff, additive Laplace smoothing, log-sum-exp temperature decoding, and harmonic consonance evaluation.
+24. **[`aazminu/NYC-Property-Scout`](https://github.com/aazminu/NYC-Property-Scout)** — NYC real-estate geospatial BBL normalization, multi-source dataset discrepancy auditing, spatial Haversine comparable matching, and NOI/cap-rate valuation pipeline.
+25. **[`aazminu/nitro-lab`](https://github.com/aazminu/nitro-lab)** — Real-time Linux home-server and multi-container Docker health telemetry engine over Server-Sent Events (SSE) with online Welford/EWMA anomaly detection and SLA burn-rate calculation.
+26. **[`aazminu/Watch-Engine`](https://github.com/aazminu/Watch-Engine)** — Hybrid Okapi BM25 and dense vector watch catalog search engine with Reciprocal Rank Fusion (RRF), MAD z-score price anomaly detection, and Recall@K/MRR/nDCG@K retrieval evaluation.
+27. **[`aazminu/ClaimLess`](https://github.com/aazminu/ClaimLess)** — AI medical-bill auditing and patient advocacy engine with GPCI locality-adjusted CMS Medicare fee-schedule benchmarking, NCCI unbundling detection, and settlement strategy synthesis.
+28. **[`aazminu/finsim`](https://github.com/aazminu/finsim)** — Interactive historical market regime and portfolio simulator with CAGR/Sharpe/Sortino/VaR/CVaR risk analytics, cash-conserving SELL-first rebalancing, and seeded GBM Monte Carlo projections.
 
 ---
 

@@ -34,6 +34,12 @@ All core research packages, full-stack applications, and open-source platform co
 | [`aazminu/grab-pic`](https://github.com/aazminu/grab-pic) | Event Photo Sharing & Selfie Search | Java Spring Boot, Next.js, Python GhostFaceNet + RetinaFace worker, cosine-similarity embedding matcher |
 | [`aazminu/comic-subscription`](https://github.com/aazminu/comic-subscription) | Marvel Series Tracker & Delta Notifier | Node.js, Express, Marvel API hash authentication, chapter-delta detection & automated email alerts |
 | [`aazminu/motorcycle-rideability-index`](https://github.com/aazminu/motorcycle-rideability-index) | Motorcycle Rideability Scoring Service | Node.js, Express, weather-driven rideability score clamping (`[0, 10]`), snow detection & risk tier classification |
+| [`aazminu/markov-music`](https://github.com/aazminu/markov-music) | Variable-Order Markov Musical Generator | Python 3.10+, suffix backoff across orders `k-1..1`, Laplace smoothing, log-sum-exp temperature decoding, consonance evaluation |
+| [`aazminu/NYC-Property-Scout`](https://github.com/aazminu/NYC-Property-Scout) | NYC Geospatial BBL & Cap-Rate Valuation | Python 3.10+, FastAPI, canonical 10-digit BBL normalization, dataset discrepancy auditing, Haversine comps, NOI/cap-rate engine |
+| [`aazminu/nitro-lab`](https://github.com/aazminu/nitro-lab) | Real-Time Linux & Docker Telemetry Engine | Node.js, Express, SSE streaming, Welford/EWMA thermal anomaly detection, Docker socket-proxy crash-loop & SLA burn-rate auditor |
+| [`aazminu/Watch-Engine`](https://github.com/aazminu/Watch-Engine) | Hybrid BM25 + Vector Watch Search Engine | Node.js, Express, React, Okapi BM25 + cosine similarity Reciprocal Rank Fusion (RRF), MAD price anomaly detector, nDCG@K eval |
+| [`aazminu/ClaimLess`](https://github.com/aazminu/ClaimLess) | Medical Bill CPT/NCCI Auditing Platform | Next.js, TypeScript, Node.js, GPCI locality-adjusted CMS Medicare fee benchmarker, NCCI unbundling detector, appeal synthesizer |
+| [`aazminu/finsim`](https://github.com/aazminu/finsim) | Historical Regime & Portfolio Risk Simulator | TypeScript, Express, React, CAGR/Sharpe/Sortino/VaR/CVaR analytics, cash-safe SELL-first rebalancer, seeded GBM Monte Carlo |
 
 ---
 
@@ -67,7 +73,8 @@ The CGAS Lab software suite integrates publicly accessible, non-commercial scien
 | `assets/extension.js` | Progressive enhancement module injecting the Featured Flagship Banner, Interactive Category Filter & Search Bar, 4-Tab Interactive Scientific & Systems Workbench (`#workbench`), 5 Technical Lab Notes (`#lab-notes`), CGAS Lab Overview (`#research-lab`), and Lab Visual Gallery |
 | `assets/index-yL4Jrv0C.css` & `assets/extension.css` | Editorial light/dark design system (`Bricolage Grotesque`, `Archivo`, monospace telemetry, responsive grid, interactive workbench styles) |
 | `assets/abdullah-azmi-resume.pdf` | Publication-grade 1-page Curriculum Vitae & Systems Engineering Resume (mirrored at `assets/northwestern-student-resume.pdf` for backward link compatibility) |
-| `PROFILE_PLAN.md` | Full 16-system architectural specification and benchmark catalog |
+| `PROFILE_PLAN.md` | Full 28-system architectural specification and benchmark catalog |
 | `sitemap.xml` & `robots.txt` | Search engine crawl directives and XML sitemap indexing `/`, `/lab/`, `/research/`, and the CV PDF |
-| `tests/portfolio.test.mjs` | Automated `node --test` verification suite validating HTML structure, Schema.org JSON-LD, sitemap/robots.txt, binary/text asset integrity, and all 22 standalone GitHub repository links |
+| `tests/portfolio.test.mjs` | Automated `node --test` verification suite validating HTML structure, Schema.org JSON-LD, sitemap/robots.txt, binary/text asset integrity, and all 28 standalone GitHub repository links |
+
 

@@ -158,3 +158,68 @@ This specification documents the 16 scientific, full-stack, distributed-data, ap
 - **Problem & Architecture:**
   - Multi-user group recommendation engine where 2–12 participants join shared rooms via **FastAPI WebSockets** (`<200ms` state synchronization latency across 10+ concurrent rooms).
   - Combines learned **PyTorch Neural Matrix Factorization (NMF)** user/item embeddings with residual bias correction and an interactive **Pareto-fair group utility aggregator** (balancing mean group affinity against least-misery $\min_{u \in G} s(u, i)$ fairness constraints) that updates live rankings immediately as members swipe or re-weight genre constraints.
+
+---
+
+## Part IV · Additional Applied ML, Quantitative Finance & Full-Stack Systems (17–28)
+
+### 17. S&P 500 Portfolio Analytics & Conviction Optimizer
+- **Repository:** [`github.com/aazminu/sp500_platform`](https://github.com/aazminu/sp500_platform)
+- **Stack:** Python, React, Alpaca API, Quantitative Risk Analytics
+- **Architecture & Verification:** Computes annualized Sharpe, Sortino, and maximum drawdown diagnostics, blends fundamental metrics with LLM conviction scores via capped water-filling weight optimization, and executes sell-first rebalancing orders.
+
+### 18. Sliding-Window RAG AP Study Guide Generator
+- **Repository:** [`github.com/aazminu/AP-Study-Guide-Generator`](https://github.com/aazminu/AP-Study-Guide-Generator)
+- **Stack:** Python, FAISS, Dense Embeddings, Retrieval Evaluation
+- **Architecture & Verification:** Scrapes structured curriculum units, applies overlapping word-window chunking with zero-norm-safe cosine similarity search, and evaluates retrieval quality using Recall@K, MRR, and nDCG@K benchmarks.
+
+### 19. Spatiotemporal Environmental Disaster Classifier
+- **Repository:** [`github.com/aazminu/Environmental-Disaster-Classifier`](https://github.com/aazminu/Environmental-Disaster-Classifier)
+- **Stack:** Python, Scikit-Learn, NASA EONET 10-Year Dataset
+- **Architecture & Verification:** Projects latitude/longitude coordinates onto a 3D unit sphere with cyclical seasonal encodings and trains an inverse-frequency class-weighted k-NN classifier across global natural hazard events.
+
+### 20. Event Photo Sharing & Facial Embedding Search (`grab-pic`)
+- **Repository:** [`github.com/aazminu/grab-pic`](https://github.com/aazminu/grab-pic)
+- **Stack:** Java Spring Boot, Next.js, Python, GhostFaceNet, RetinaFace
+- **Architecture & Verification:** Pairs a Spring Boot event-gallery backend with a Python RetinaFace detection and GhostFaceNet 512-D cosine-similarity selfie matching worker.
+
+### 21. Marvel Comic Series Tracker & Delta Notifier
+- **Repository:** [`github.com/aazminu/comic-subscription`](https://github.com/aazminu/comic-subscription)
+- **Stack:** Node.js, Express, MongoDB, Marvel REST API
+- **Architecture & Verification:** Authenticates against the Marvel Developer API via MD5 timestamp-key hashing, detects newly released issue deltas per subscriber, and dispatches automated email digests.
+
+### 22. Weather-Driven Motorcycle Rideability Index
+- **Repository:** [`github.com/aazminu/motorcycle-rideability-index`](https://github.com/aazminu/motorcycle-rideability-index)
+- **Stack:** Node.js, Express, OpenWeatherMap API
+- **Architecture & Verification:** Evaluates temperature, precipitation, wind gusts, visibility, and snow hazards to compute a clamped `[0, 10]` rideability score and categorical risk tier.
+
+### 23. Variable-Order Markov Musical Sequence Generator (`markov-music`)
+- **Repository:** [`github.com/aazminu/markov-music`](https://github.com/aazminu/markov-music)
+- **Stack:** Python 3.10+, Variable-Order Suffix Backoff, Music21 / MIDI, Pytest
+- **Architecture & Verification:** Implements $k$-th order Markov transition tables with recursive suffix backoff across orders $k-1 \dots 1$, additive Laplace smoothing, log-sum-exp numerically stable temperature decoding (supporting greedy $\tau \le 0$ limits), per-transition perplexity scoring, and pitch-class entropy / diatonic scale / interval consonance evaluation.
+
+### 24. NYC Geospatial BBL Valuation & Data-Quality Auditor (`NYC-Property-Scout`)
+- **Repository:** [`github.com/aazminu/NYC-Property-Scout`](https://github.com/aazminu/NYC-Property-Scout)
+- **Stack:** Python 3.10+, FastAPI, Geospatial Haversine Comps, PLUTO / Tax Analytics, Pytest
+- **Architecture & Verification:** Normalizes and decomposes canonical 10-digit NYC Borough-Block-Lot (BBL) identifiers, audits multi-source property records for duplicate ZPIDs, borough-prefix mismatches, and MAD price-per-sqft outliers, matches spatial Haversine comparables, and computes mortgage amortization, Net Operating Income (NOI), cap rate, and cash-on-cash returns.
+
+### 25. Real-Time Linux & Docker Fleet Telemetry Engine (`nitro-lab`)
+- **Repository:** [`github.com/aazminu/nitro-lab`](https://github.com/aazminu/nitro-lab)
+- **Stack:** Node.js, Express, Server-Sent Events (SSE), Docker Socket-Proxy, Welford / EWMA Anomaly Detection
+- **Architecture & Verification:** Streams real-time Linux `/proc` and `/sys` hardware telemetry and Docker container fleet health over SSE, featuring counter-wraparound-safe CPU delta calculation, online Welford variance + EWMA thermal/memory anomaly detection, 24-character Coolify container prefix matching, OOM (`exitCode=137`) crash-loop detection, and SLA error-budget burn-rate tracking.
+
+### 26. Hybrid BM25 + Dense Vector Watch Search Engine (`Watch-Engine`)
+- **Repository:** [`github.com/aazminu/Watch-Engine`](https://github.com/aazminu/Watch-Engine)
+- **Stack:** Node.js, Express, React, Okapi BM25, Reciprocal Rank Fusion (RRF), Supabase
+- **Architecture & Verification:** Combines structured natural-language query parsing (brand, reference, price, diameter, movement, complications) with Okapi BM25 lexical scoring, zero-norm-safe cosine similarity over dense embeddings, weighted Reciprocal Rank Fusion (RRF), MAD z-score cross-marketplace price anomaly detection, and Recall@K / MRR / nDCG@K evaluation.
+
+### 27. Deterministic CPT/HCPCS Medical Bill Auditor (`ClaimLess`)
+- **Repository:** [`github.com/aazminu/ClaimLess`](https://github.com/aazminu/ClaimLess)
+- **Stack:** Next.js, TypeScript, Node.js, CMS Medicare Fee Schedule, NCCI Edits Engine
+- **Architecture & Verification:** Parses itemized hospital statements, benchmarks CPT/HCPCS line items against GPCI locality-adjusted CMS Medicare fee schedules, flags duplicate same-day charges (respecting distinct-service modifiers `-59`/`-76`/`-91`), detects NCCI mutually exclusive unbundling pairs and unitemized revenue codes, reconciles EOB contractual adjustments, and synthesizes patient appeal strategies.
+
+### 28. Historical Market Regime & Quantitative Portfolio Simulator (`finsim`)
+- **Repository:** [`github.com/aazminu/finsim`](https://github.com/aazminu/finsim)
+- **Stack:** TypeScript, Express, React, Quantitative Risk Engine, Seeded Monte Carlo GBM
+- **Architecture & Verification:** Computes CAGR, annualized volatility, Sharpe/Sortino ratios, maximum drawdown, and historical 95% VaR/CVaR across historical macro regimes, generates cash-conserving SELL-first drift rebalancing trades, and runs deterministic seeded Box–Muller Geometric Brownian Motion (GBM) Monte Carlo wealth fan-chart projections.
+
