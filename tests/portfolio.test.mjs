@@ -416,9 +416,15 @@ test('All 16 core systems and 12 additional repositories (28 standalone project 
     assert.ok(bundleJs.includes(url), `Main portfolio bundle missing standalone link ${url}`);
   }
 
+  assert.ok(
+    profilePlan.includes('(28 Systems)') && !profilePlan.includes('(16 Systems)'),
+    'PROFILE_PLAN.md must specify (28 Systems) rather than stale (16 Systems)'
+  );
+
   for (const repo of ALL_28_REPOS) {
     const url = `https://github.com/aazminu/${repo}`;
     assert.ok(indexHtml.includes(url), `index.html missing standalone repository link ${url}`);
+    assert.ok(extensionJs.includes(`'${repo}'`), `assets/extension.js missing standalone repository ${repo}`);
     assert.ok(labHtml.includes(url), `lab/index.html missing standalone repository link ${url}`);
     assert.ok(researchHtml.includes(url), `research/index.html missing standalone repository link ${url}`);
     assert.ok(profilePlan.includes(url), `PROFILE_PLAN.md missing standalone link ${url}`);

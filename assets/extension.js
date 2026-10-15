@@ -1226,6 +1226,66 @@
       card.append(linksRow);
       grid.append(card);
     }
+
+    const standaloneRepos = [
+      'paper-pulse',
+      'chrom-alphagenome',
+      'bayes-kalman-trace',
+      'fold-energetics-xtb',
+      'airtight-container',
+      'LeadAI',
+      'odyssey',
+      'mermaid',
+      'FarmData2',
+      'data-cleaning-hackumass',
+      'python-riscv-simulator',
+      'dividend-capture-spark',
+      'world-model-compression-mpc',
+      'adaptive-ml-moderation',
+      'agentic-scrape-repair',
+      'movie-recc',
+      'sp500_platform',
+      'AP-Study-Guide-Generator',
+      'Environmental-Disaster-Classifier',
+      'grab-pic',
+      'comic-subscription',
+      'motorcycle-rideability-index',
+      'markov-music',
+      'NYC-Property-Scout',
+      'nitro-lab',
+      'Watch-Engine',
+      'ClaimLess',
+      'finsim'
+    ];
+
+    const catalogCard = document.createElement('article');
+    catalogCard.className = '_card_1aul7_24';
+    catalogCard.style.gridColumn = '1 / -1';
+    catalogCard.append(
+      createText('h2', '_name_1aul7_33', 'Complete Standalone Engineering & Research Suite (28 Public Repositories)'),
+      createText(
+        'span',
+        '_award_1aul7_42',
+        'CGAS Lab Scientific Packages · Distributed Data & ML · Full-Stack Systems · Quantitative Analytics'
+      ),
+      createText(
+        'p',
+        '_description_1aul7_63',
+        'Direct standalone GitHub repositories across scientific knowledge graphs, regulatory genomics, Bayesian state-space filtering, quantum pocket energetics, idempotent yard billing, cycle-accurate RISC-V simulation, SVD world-model compression, variable-order Markov musical synthesis, NYC BBL geospatial valuation, SSE Docker telemetry, hybrid BM25+vector RRF search, CPT/NCCI medical bill auditing, and Sharpe/Sortino/CVaR portfolio simulation.'
+      )
+    );
+    const catalogLinks = document.createElement('div');
+    catalogLinks.className = 'portfolio-lab__card-links';
+    for (const repoName of standaloneRepos) {
+      const a = createText('a', '_link_1aul7_72', `aazminu/${repoName} ↗`);
+      a.href = `https://github.com/aazminu/${repoName}`;
+      a.target = '_blank';
+      a.rel = 'noreferrer';
+      catalogLinks.append(a);
+    }
+    catalogCard.append(catalogLinks);
+    grid.append(catalogCard);
+
     section.append(grid);
 
     const fieldSection = document.querySelector('.portfolio-field');
