@@ -1,0 +1,134 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R /F3 6 0 R >> >> /Contents 7 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+7 0 obj
+<< /Length 10959 >>
+stream
+0.080 0.080 0.070 rg BT /F2 18.0 Tf 42.00 754.00 Td (ABDULLAH AZMI) Tj ET
+0.360 0.390 0.220 rg BT /F3 8.0 Tf 345.00 756.00 Td (ORCID: 0009-0004-8172-6394 | github.com/aazminu) Tj ET
+0.240 0.250 0.200 rg BT /F1 9.0 Tf 42.00 741.00 Td (Lead Researcher, Computational Genomics & Agentic Systems \(CGAS\) Lab | Northwestern University \(CS & NICO\)) Tj ET
+0.320 0.320 0.280 rg BT /F1 8.3 Tf 42.00 730.00 Td (Evanston, IL & New York, NY | m4u5t4@u.northwestern.edu | erlokix@gmail.com | https://abdullahazmi.com | https://abdullahazmi.com/lab/) Tj ET
+0.360 0.390 0.220 rg BT /F2 9.5 Tf 42.00 714.00 Td (EDUCATION & ACADEMIC AFFILIATION) Tj ET
+0.720 0.720 0.680 RG 0.75 w 42.00 710.00 m 570.00 710.00 l S
+0.080 0.080 0.070 rg BT /F2 9.5 Tf 42.00 699.00 Td (Northwestern University -- McCormick School of Engineering & NICO) Tj ET
+0.320 0.320 0.280 rg BT /F3 8.1 Tf 511.20 699.00 Td (Evanston, IL) Tj ET
+0.280 0.300 0.220 rg BT /F1 8.5 Tf 42.00 688.50 Td (Computer Science & Complex Systems | Computational Genomics & Agentic Systems \(CGAS\) Lab \(Mudd Hall 3510\)) Tj ET
+0.380 0.380 0.340 rg BT /F1 8.1 Tf 504.00 688.50 Td (2023 -- Present) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 678.00 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 678.00 Td (Core Focus: Autonomous Scientific Knowledge Graphs, Multi-Agent Verification, Regulatory Genomics,) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 668.30 Td (Probabilistic State-Space Inference, and Distributed Full-Stack Systems.) Tj ET
+0.360 0.390 0.220 rg BT /F2 9.5 Tf 42.00 647.40 Td (RESEARCH & ENGINEERING EXPERIENCE) Tj ET
+0.720 0.720 0.680 RG 0.75 w 42.00 643.40 m 570.00 643.40 l S
+0.080 0.080 0.070 rg BT /F2 9.5 Tf 42.00 632.40 Td (Computational Genomics & Agentic Systems \(CGAS\) Lab -- Northwestern CS) Tj ET
+0.320 0.320 0.280 rg BT /F3 8.1 Tf 496.50 632.40 Td (2025 -- Present) Tj ET
+0.280 0.300 0.220 rg BT /F1 8.5 Tf 42.00 621.90 Td (Lead Computational Systems Researcher & Principal Software Architect) Tj ET
+0.380 0.380 0.340 rg BT /F1 8.1 Tf 517.20 621.90 Td (Evanston, IL) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 611.40 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 611.40 Td (Architected PaperPulse \(aazminu/paper-pulse\), an autonomous nightly literature ingestion and) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 601.70 Td (knowledge-graph engine indexing ArXiv, PubMed, Semantic Scholar, and OpenAlex into PostgreSQL \(pgvector\)) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 592.00 Td (and Neo4j with deterministic multi-hop claim provenance.) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 581.10 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 581.10 Td (Developed ChromAlphaGenome \(aazminu/chrom-alphagenome\), integrating AlphaGenome cis-regulatory contact) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 571.40 Td (tracks, ChromBPNet/DeepLIFT chromatin accessibility attribution, and MaxEntScan donor/acceptor) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 561.70 Td (splice-junction Delta-PSI modeling across ClinVar and gnomAD \(0.941 AUROC\).) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 550.80 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 550.80 Td (Built FoldEnergetics-xTB \(aazminu/fold-energetics-xtb\), coupling AlphaFold 3 PAE spectral domain) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 541.10 Td (partitioning and Foldseek 3Di structural homology with semiempirical tight-binding quantum mechanics) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 531.40 Td (\(GFN2-xTB\) and ChEMBL bioactivity triage.) Tj ET
+0.080 0.080 0.070 rg BT /F2 9.5 Tf 42.00 520.50 Td (Northwestern Institute on Complex Systems \(NICO\)) Tj ET
+0.320 0.320 0.280 rg BT /F3 8.1 Tf 511.20 520.50 Td (2024 -- 2025) Tj ET
+0.280 0.300 0.220 rg BT /F1 8.5 Tf 42.00 510.00 Td (Computational Biology & Probabilistic Inference Researcher) Tj ET
+0.380 0.380 0.340 rg BT /F1 8.1 Tf 517.20 510.00 Td (Evanston, IL) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 499.50 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 499.50 Td (Engineered BayesKalmanTrace \(aazminu/bayes-kalman-trace\), a pure NumPy/SciPy recursive Bayesian) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 489.80 Td (state-space filter and Rauch-Tung-Striebel \(RTS\) backward smoother across 500-sample noisy velocity) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 480.10 Td (trajectories with analytic missing-data marginalization.) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 469.20 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 469.20 Td (Calibrated Laplace-smoothed rolling-volatility empirical likelihoods over a 250,000-measurement corpus and) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 459.50 Td (fused them via log-linear \(Product-of-Experts\) pooling, lifting held-out regime classification accuracy) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 449.80 Td (from 74.2% to 93.8% \(0.041 ECE\).) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 438.90 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 438.90 Td (Automated parallel Python + SQL reporting and multi-omics validation workflows, cutting recurring exhibit) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 429.20 Td (preparation latency from over 1 hour to under 8 minutes \(87% reduction\) while catching upstream schema and) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 419.50 Td (reconciliation anomalies.) Tj ET
+0.080 0.080 0.070 rg BT /F2 9.5 Tf 42.00 408.60 Td (Enterprise Operations & Open-Source Systems Engineering) Tj ET
+0.320 0.320 0.280 rg BT /F3 8.1 Tf 511.20 408.60 Td (2023 -- 2025) Tj ET
+0.280 0.300 0.220 rg BT /F1 8.5 Tf 42.00 398.10 Td (Full-Stack & Workflow Automation Lead \(Airtight Container, LeadAI, Odyssey, Mermaid, FarmData2\)) Tj ET
+0.380 0.380 0.340 rg BT /F1 8.1 Tf 477.60 398.10 Td (New York, NY & Remote) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 387.60 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 387.60 Td (Built and deployed Airtight Container \(aazminu/airtight-container\), a production yard inventory, quoting,) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 377.90 Td (and idempotent month-end storage billing platform \(React, TypeScript, Node.js/Express, PostgreSQL, AWS) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 368.20 Td (EC2; 40K+ LOC, 25 migrations, 275+ automated tests\).) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 357.30 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 357.30 Td (Engineered LeadAI \(aazminu/LeadAI\) async batch entity enrichment queues and an event-driven) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 347.60 Td (Python/FastAPI/Slack ChatOps bot integrating GitHub Actions and issue trackers, reducing manual) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 337.90 Td (change-request triage latency by 95%.) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 327.00 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 327.00 Td (Delivered reviewed open-source fixes and regression suites to Khoury Odyssey \(aazminu/odyssey, recursive) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 317.30 Td (MDX preview rendering & editor state sync\), Mermaid \(aazminu/mermaid, bar-chart data labels\), and) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 307.60 Td (FarmData2 \(aazminu/FarmData2, transactional APIs & Cypress E2E tests\).) Tj ET
+0.360 0.390 0.220 rg BT /F2 9.5 Tf 42.00 286.70 Td (SELECTED OPEN-SOURCE SYSTEMS & SIDEPROJECTS \(16 PUBLIC SYSTEMS ON GITHUB.COM/AAZMINU\)) Tj ET
+0.720 0.720 0.680 RG 0.75 w 42.00 282.70 m 570.00 282.70 l S
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 271.70 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 271.70 Td (PaperPulse \(github.com/aazminu/paper-pulse\): FastAPI + PostgreSQL \(pgvector\) + Neo4j + Celery/Redis +) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 262.00 Td (Next.js 14 autonomous literature synthesis, multi-hop citation graph verification, and daily audio) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 252.30 Td (briefings.) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 241.40 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 241.40 Td (ChromAlphaGenome & FoldEnergetics-xTB \(github.com/aazminu\): Base-resolution chromatin/splice variant) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 231.70 Td (prioritization \(0.941 AUROC\) and AlphaFold 3 PAE + Foldseek 3Di + GFN2-xTB quantum pocket energetics) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 222.00 Td (triage with SKILL.md agent protocols.) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 211.10 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 211.10 Td (BayesKalmanTrace \(github.com/aazminu/bayes-kalman-trace\): Constant-acceleration Kalman filter + RTS) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 201.40 Td (smoother + log-linear likelihood pooling over 250K trajectory measurements \(93.8% accuracy, exact dropout) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 191.70 Td (marginalization\).) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 180.80 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 180.80 Td (Airtight Container & LeadAI \(github.com/aazminu\): Production React/Node/PostgreSQL container yard billing) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 171.10 Td (platform \(275+ tests, idempotent generateShMonthEnd invoicing\) and bounded async multi-source entity) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 161.40 Td (enrichment queue.) Tj ET
+0.360 0.390 0.220 rg BT /F2 8.5 Tf 50.00 150.50 Td (-) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 150.50 Td (Systems, Data & ML Architecture Suite: ScrubData \(100K+ row Spark/PostgreSQL cleaning & outlier) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 140.80 Td (reconciliation\), Cycle-Accurate RISC-V RV32I 5-Stage Pipelined Simulator \(EX/MEM & MEM/WB forwarding\),) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 131.10 Td (Dividend Capture Spark/Kafka Streaming \(165K+ records\), Low-Rank SVD World-Model Compression \(LeWM MPC\),) Tj ET
+0.140 0.140 0.120 rg BT /F1 8.3 Tf 58.00 121.40 Td (Adaptive DistilBERT Moderation \(<150ms p95\), and WebSocket Group Recommender.) Tj ET
+0.360 0.390 0.220 rg BT /F2 9.5 Tf 42.00 100.50 Td (TECHNICAL STACK) Tj ET
+0.720 0.720 0.680 RG 0.75 w 42.00 96.50 m 570.00 96.50 l S
+0.080 0.080 0.070 rg BT /F2 8.3 Tf 42.00 85.50 Td (Languages & Systems:) Tj ET
+0.160 0.160 0.140 rg BT /F1 8.2 Tf 148.00 85.50 Td (Python \(3.11+\), TypeScript, JavaScript, SQL \(PostgreSQL\), C, C++, Rust, RISC-V ISA, Bash, PowerShell 7) Tj ET
+0.080 0.080 0.070 rg BT /F2 8.3 Tf 42.00 75.30 Td (Backend, Data & Cloud:) Tj ET
+0.160 0.160 0.140 rg BT /F1 8.2 Tf 148.00 75.30 Td (FastAPI, Node.js, Express, React 18, Next.js 14, PostgreSQL \(pgvector\), Neo4j, Redis, Celery, Spark, Kafka, Docker, AWS) Tj ET
+0.080 0.080 0.070 rg BT /F2 8.3 Tf 42.00 65.10 Td (Scientific AI & QA:) Tj ET
+0.160 0.160 0.140 rg BT /F1 8.2 Tf 148.00 65.10 Td (PyTorch, NumPy, SciPy, AlphaFold 3 / AlphaGenome, Foldseek 3Di, GFN2-xTB, Kalman/RTS, Pytest, Jest, Vitest, Cypress) Tj ET
+endstream
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000267 00000 n 
+0000000337 00000 n 
+0000000412 00000 n 
+0000000480 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+11492
+%%EOF

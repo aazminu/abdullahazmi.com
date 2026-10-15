@@ -1,40 +1,153 @@
-# Northwestern student portfolio plan
+# Abdullah Azmi · CGAS Lab & Systems Engineering Catalog (16 Systems)
 
-## Profile status
+**Lead Researcher & Principal Systems Architect:** Abdullah Azmi (`m4u5t4@u.northwestern.edu` · `erlokix@gmail.com`)  
+**Affiliations:** Computational Genomics & Agentic Systems (CGAS) Lab · Department of Computer Science & Northwestern Institute on Complex Systems (NICO), Northwestern University  
+**Portals:** [abdullahazmi.com](https://abdullahazmi.com/) · [abdullahazmi.com/lab](https://abdullahazmi.com/lab/) · [github.com/aazminu](https://github.com/aazminu) · [ORCID: 0009-0004-8172-6394](https://orcid.org/0009-0004-8172-6394)
 
-This is a hypothetical profile template for an unnamed Northwestern computer science student. It is not a record of completed employment, contributions, awards, shipped products, customers, or measurable results. Square-bracketed values are fields to replace with verified information. The name **Northwestern Student** is a layout placeholder; replace it with the student's real name before sharing.
+---
 
-## Experience and project boundaries
+## Architectural Synthesis Overview
 
-Use **Experience** for internships, paid roles, client work, and campus or lab work after the work was actually performed. Each entry needs a real organization, title, location, dates, and bullets that describe the student's own contribution with evidence. Keep the original three-row visual layout, but replace its role and achievement placeholders before presenting it as history.
+This specification documents the 16 scientific, full-stack, distributed-data, applied-ML, and open-source systems showcased on [abdullahazmi.com](https://abdullahazmi.com/). The portfolio unifies two complementary engineering tracks:
 
-Independent apps, tools, automations, experiments, and research prototypes belong in **Projects**. Describe each project's real state and link to its repository or demo only after it exists. Open-source work can appear under **Projects** or **Contributions** when there is a concrete public issue or pull request to show. Put it in Experience only when it was part of an actual role.
+1. **Computational Genomics & Agentic Systems (CGAS) Lab Research Suite (Systems 01–04):** Autonomous multi-hop scientific literature synthesis (`PaperPulse`), base-resolution cis-regulatory and splice-disruption variant attribution (`ChromAlphaGenome`), exact recursive Bayesian state-space trajectory filtering (`BayesKalmanTrace`), and AlphaFold 3 PAE domain partitioning coupled with semiempirical tight-binding quantum pocket energetics (`FoldEnergetics-xTB`).
+2. **Production Full-Stack, Distributed Data, Applied ML & Open-Source Systems (Systems 05–16):** Idempotent container-yard inventory and month-end billing (`Airtight Container`), bounded asynchronous entity enrichment (`LeadAI`), reviewed open-source platform engineering (`Khoury Odyssey`, `Mermaid`, `FarmData2`), distributed tabular validation (`ScrubData`), cycle-accurate processor simulation (`RISC-V RV32I`), streaming financial alpha pipelines (`Spark/Kafka Dividend Capture`), spectral world-model compression (`LeWM SVD`), low-latency ML moderation (`DistilBERT`), multi-service ChatOps orchestration, and real-time WebSocket collaborative filtering.
 
-The page keeps Harry Lynch's original page structure: hero, experience, projects, and footer. It does not add an About section. The separately added “In the field” gallery uses explicitly labeled sample photos until the student supplies real images.
+---
 
-## Three experience placeholders
+## Part I · CGAS Lab Flagship Scientific Systems (01–04)
 
-These rows preserve the source page's experience layout and sentence patterns. They describe possible paths, not positions already held.
+### 1. PaperPulse — Autonomous Literature & Citation Knowledge Graph Engine
+- **Repository:** [`github.com/aazminu/paper-pulse`](https://github.com/aazminu/paper-pulse)
+- **Stack:** Python 3.11+, FastAPI, PostgreSQL (`pgvector`), Neo4j, Celery, Redis, Next.js 14, TypeScript, Docker
+- **Architecture & Verification:**
+  - Scheduled nightly ingestion pipelines query **ArXiv, Semantic Scholar, PubMed, and OpenAlex**, normalizing metadata, abstracts, full-text sections, and citation edges.
+  - Dual storage layer combines dense semantic vector embeddings in **PostgreSQL (`pgvector` HNSW indexes)** with a multi-hop **Neo4j** property graph (`(:Paper)-[:CITES]->(:Paper)`, `(:Paper)-[:evaluates]->(:Dataset)`, `(:Paper)-[:proposes]->(:Method)`).
+  - Enforces **deterministic claim-level provenance**: every synthesized literature digest, hypothesis link, or audio briefing requires verifiable primary-source DOI/arXiv citations and supporting passage spans.
 
-1. **[Organization 1] — [Role title]**. Add `[Dates to add]`, `[Location]`, and evidence-backed bullets. The source bullet patterns cover a problem and language, a component and behavior, an analysis and decision, and an operation moved off a processing path. Fill each bracket with the actual system, action, and result.
-2. **[Organization 2] — [Role title]**. Add real details only after completing the work. The source bullet patterns cover a manual process and timing, a dataset and analysis, and a recurring pipeline with input, schema, and validation details.
-3. **[Organization 3] — [Role title]**. If this becomes an open-source contribution, record the repository, issue or pull request, date, fix, regression check, and review outcome. List it under Projects or Contributions unless it was part of a formal role.
+### 2. ChromAlphaGenome — Regulatory Genomics & Non-Coding Variant Attribution
+- **Repository:** [`github.com/aazminu/chrom-alphagenome`](https://github.com/aazminu/chrom-alphagenome)
+- **Stack:** Python 3.10+, NumPy, SciPy, AlphaGenome Atlas Tracks, ChromBPNet / DeepLIFT Attribution, MaxEntScan $\Delta\text{PSI}$, ClinVar & gnomAD v4, Antigravity `SKILL.md`
+- **Architecture & Verification:**
+  - Integrates long-range enhancer–promoter contact weights from the **AlphaGenome Atlas** with base-resolution **ChromBPNet / DeepLIFT** chromatin accessibility log-fold-change ($\lvert\Delta\log_2\text{ATAC}\rvert$) tracks across ENCODE v4 candidate cis-regulatory elements (cCREs).
+  - Couples transcription-factor motif disruption scoring with **MaxEntScan** 5' donor and 3' acceptor splice-junction $\lvert\Delta\text{PSI}\rvert$ modeling and automated Sashimi coverage visualization.
+  - Achieves **0.941 AUROC** and **0.887 AUPRC** on held-out ClinVar pathogenic vs. gnomAD v4 common non-coding variant benchmarks.
 
-## Four project placeholders
+### 3. BayesKalmanTrace — Recursive Bayesian State-Space Trajectory Estimator
+- **Repository:** [`github.com/aazminu/bayes-kalman-trace`](https://github.com/aazminu/bayes-kalman-trace)
+- **Stack:** Python 3.10+, NumPy, SciPy, Constant-Acceleration Kalman Filter, Rauch–Tung–Striebel (RTS) Smoother, Log-Linear Likelihood Pooling, Antigravity `SKILL.md`
+- **Architecture & Verification:**
+  - Propagates exact Gaussian state-space posteriors $\mathcal{N}(\hat{x}_{t|T}, P_{t|T})$ across **500-sample** noisy 2D/3D velocity trajectories using forward Kalman filtering and backward **Rauch–Tung–Striebel (RTS)** smoothing.
+  - Handles intermittent sensor dropouts ($p_{\text{drop}} \in [0.05, 0.45]$) via **exact analytical state-transition marginalization** ($P_{t|t-1} = F P_{t-1|t-1} F^\top + Q$) without heuristic linear interpolation bias.
+  - Fuses Laplace-smoothed rolling-volatility empirical likelihood tables (calibrated over **250,000 trajectory measurements**) with instantaneous velocity posteriors via **log-linear (Product-of-Experts) pooling**, improving held-out regime classification accuracy from **74.2% to 93.8%** (**0.041 ECE**).
 
-The page contains four original project records. Project 1 is also presented in the featured panel and hidden in the card grid, so it counts once.
+### 4. FoldEnergetics-xTB — AlphaFold 3 PAE Partitioning & Quantum-Chemical Pocket Triage
+- **Repository:** [`github.com/aazminu/fold-energetics-xtb`](https://github.com/aazminu/fold-energetics-xtb)
+- **Stack:** Python 3.10+, AlphaFold 3 (`pLDDT` / `PAE`), Foldseek 3Di, GFN2-xTB Semiempirical QM, ChEMBL `pChEMBL`, NetworkX, Antigravity `SKILL.md`
+- **Architecture & Verification:**
+  - Filters disordered surface loops via residue-level $\text{pLDDT} \ge 70$ thresholds and partitions **AlphaFold 3 Predicted Aligned Error (PAE)** matrices into rigid structural modules via graph connected components and spectral clustering.
+  - Detects cryptically conserved binding pockets using **Foldseek 3Di** structural homology alignments and evaluates candidate ligand poses using **GFN2-xTB** semiempirical tight-binding interaction energies ($\Delta E_{\text{bind}}$), HOMO–LUMO electronic gap stability, and **ChEMBL (`pChEMBL`)** potency priors.
 
-1. **[Project 1]** keeps the source description pattern for a VS Code extension: capture an edit event, define per-symbol metrics, ingest editor flushes, process diffs, and show analytics and a code-replay timeline. Replace the API, model, database, provider, framework, audience, and metric placeholders with the built system's actual design.
-2. **[Project 2]** keeps the source pattern for an inventory and invoicing platform: contribution, code size, tests, operating context, inventory counts and value, billing modes, deployment cadence, cloud target, and schema migration count are all placeholders. Do not fill in outcomes until the project has been implemented and verified.
-3. **[Project 3]** keeps the source pattern for a recursive Bayesian classifier: implementation approach, libraries, classes, sample count, transition model, missing-data behavior, corpus size, baseline, and result need to reflect a real experiment and evaluation set.
-4. **[Project 4]** keeps the source pattern for a Universal Machine emulator: instruction count, architecture, measured throughput, and host description are placeholders. Report performance only with a reproducible benchmark.
+---
 
-For every project, replace its placeholder GitHub URL with a repository or demo that belongs to the student. Add technologies only when the implementation uses them. The current `username/project-N` links are placeholders, not repositories or references to Harry Lynch's work.
+## Part II · Production Full-Stack, Data Operations & Open-Source Platforms (05–09)
 
-## Before publishing
+### 5. Airtight Container — Full-Stack Yard Inventory & Idempotent Billing Platform
+- **Repository:** [`github.com/aazminu/airtight-container`](https://github.com/aazminu/airtight-container)
+- **Stack:** React 18, TypeScript, Node.js, Express, PostgreSQL, Prisma, AWS EC2, 275+ Automated Tests
+- **Architecture & Verification:**
+  - Full-stack operational shipping-container yard management, quoting, and recurring billing platform (**40K+ lines of code, 25 relational schema migrations, 275+ unit and integration tests**) managing **240+ active containers**.
+  - Implements deterministic, **idempotent month-end storage-and-handling billing** (`buildLinesForBox`, `generateShMonthEnd`) supporting both `ANNIVERSARY` and `MONTH_END` proration modes.
+  - Enforces composite uniqueness invariants (`(box_id, billing_period_start, billing_mode)`) inside serializable PostgreSQL transactions so re-running month-end billing batches or webhook retries produces **zero duplicate invoice line items**.
 
-- Replace the display name, education year, role paths, organizations, dates, locations, metrics, and project details with verifiable information.
-- Replace the avatar monogram and three labeled stock photos with images the student may publish.
-- Replace the contact placeholders with real GitHub, LinkedIn, and email links.
-- Add the resume at `dist/assets/northwestern-student-resume.pdf` before publishing; the original source's resume file is not included.
-- Replace the placeholder GitHub project paths after real repositories are available.
+### 6. LeadAI — Asynchronous Multi-Source Entity Enrichment & Qualification Queue
+- **Repository:** [`github.com/aazminu/LeadAI`](https://github.com/aazminu/LeadAI)
+- **Stack:** Python 3.11+, FastAPI, Async Task Queue (`pipeline_queue.py`), PostgreSQL, Structured LLM Extraction, Deterministic Retry & Recovery
+- **Architecture & Verification:**
+  - Asynchronous batch company research, multi-source web/API enrichment queue, and explicit rule-and-LLM qualification engine.
+  - Implements bounded worker concurrency, per-provider rate-limit token buckets, exponential backoff with jitter, dead-letter inspection, and schema-validated JSON extraction before generating audit-logged outreach drafts.
+
+### 7. Khoury Odyssey — University Learning Platform & Recursive MDX Preview Engine
+- **Repository:** [`github.com/aazminu/odyssey`](https://github.com/aazminu/odyssey)
+- **Stack:** Next.js, TypeScript, React, Strapi CMS, PostgreSQL, Jest Regression Suites, GitHub Actions CI
+- **Architecture & Verification:**
+  - Repaired recursive AST block conversion in the MDX lesson preview pipeline so deeply indented paragraphs, nested lists, and multi-level headings preserve their hierarchy instead of silently dropping children during live author previews.
+  - Refactored embedded code-editor state synchronization to diff file-tree descriptors before re-mounting editor instances, eliminating UI reload flicker when adding or renaming lesson files.
+  - Shipped **Jest** unit and component regression suites covering paragraph children, heading children, and 3-level nested block trees.
+
+### 8. Mermaid Diagramming Engine — Configurable Bar-Chart Labels & Layout Formatting
+- **Repository:** [`github.com/aazminu/mermaid`](https://github.com/aazminu/mermaid)
+- **Stack:** TypeScript, SVG / D3 Rendering, Jison / Langium AST Parsers, Vitest, Cypress Visual Regression
+- **Architecture & Verification:**
+  - Implemented configurable inner/outer data-value labels inside bar-chart primitives across both vertical and horizontal chart orientations, handling text bounding-box overflow and contrast-aware label placement.
+  - Refined journey-diagram label alignment and added unit + Cypress visual regression tests verifying deterministic SVG output across viewport sizes.
+
+### 9. FarmData2 — Transactional Operational Recordkeeping & Cypress E2E Verification
+- **Repository:** [`github.com/aazminu/FarmData2`](https://github.com/aazminu/FarmData2)
+- **Stack:** Node.js, Vue.js, PostgreSQL, REST APIs, Docker, Cypress End-to-End Testing
+- **Architecture & Verification:**
+  - Engineered transactional **PostgreSQL + Node.js** operational recordkeeping endpoints and reactive **Vue.js** field-entry components with strict client/server schema validation.
+  - Authored deterministic **Cypress** end-to-end integration test suites validating multi-step seeding, transplanting, and harvest log workflows inside containerized **Docker** environments.
+
+---
+
+## Part III · Systems Architecture, Distributed Data & Applied ML Suite (10–16)
+
+### 10. ScrubData — Distributed Tabular Cleaning Engine
+- **Category:** Data Operations & Distributed ETL
+- **Stack:** Python, Node.js/Express, PostgreSQL, Apache Spark / Databricks, AWS S3, Pandas / Polars
+- **Problem & Architecture:**
+  - Recurring operational datasets frequently arrive with mixed date formats, schema drift, duplicate composite keys, and extreme numerical outliers that corrupt downstream SQL reporting and ML training.
+  - **ScrubData** provides an upload $\rightarrow$ schema inference $\rightarrow$ distributed transformation $\rightarrow$ audit-report pipeline over **100,000+ row CSV/Parquet files**:
+    1. **Automated Schema & Type Inference:** Detects column types, null fractions, and candidate primary/composite keys.
+    2. **Deterministic Reconciliation:** Deduplicates records by configurable composite keys (`keep='latest_timestamp'`), normalizes currency/date strings, and applies robust **median/IQR** or **Z-score ($\lvert z \rvert > 3.0$)** anomaly isolation.
+    3. **Verification & Exception Reporting:** Emits both the cleaned dataset and a structured reconciliation manifest detailing exact row counts modified, quarantined anomalies, and column-level KS-test distribution shifts.
+
+### 11. Cycle-Accurate RISC-V (RV32I) Pipelined Simulator
+- **Category:** Computer Architecture & Systems Programming
+- **Stack:** Python 3.11+, C, RISC-V RV32I Base Integer ISA, 5-Stage Pipeline (`IF`, `ID`, `EX`, `MEM`, `WB`), Golden-Trace Verification
+- **Problem & Architecture:**
+  - Implements both a **single-cycle reference core** and a **cycle-accurate 5-stage pipelined RV32I processor core** with full instruction decoding across R-type, I-type, S-type, B-type, U-type, and J-type formats (`ADD`, `SUB`, `AND`, `OR`, `XOR`, `SLL`, `SRL`, `SRA`, `SLT`, `LW`, `SW`, `BEQ`, `BNE`, `JAL`, `LUI`).
+  - **Hazard Detection & Forwarding Unit:**
+    - **EX/MEM & MEM/WB Data Forwarding:** Routes ALU and memory results directly back to the Execute (`EX`) stage MUXes to resolve Read-After-Write (RAW) hazards without stalling.
+    - **Load-Use Stall & Bubble Insertion:** Detects when an instruction in `ID` reads a register targeted by an in-flight `LW` in `EX`, freezing `PC` and `IF/ID` for 1 cycle while injecting a deterministic `NOP` bubble into `ID/EX`.
+    - **Control Hazard Flushing:** Flushes misfetched `IF/ID` pipeline latches on taken branches (`BEQ`/`BNE`/`JAL`) and verifies final 32-register (`x0`–`x31`) and byte-addressed data-memory dumps bit-for-bit against golden architectural traces.
+
+### 12. Market-Scale Dividend Capture & Streaming Alpha
+- **Category:** Distributed Data Engineering & Quantitative ML
+- **Stack:** Apache Spark, PySpark, HDFS, Apache Kafka Structured Streaming, Gradient-Boosted Trees (Spark MLlib / XGBoost), Parquet
+- **Problem & Architecture:**
+  - Analyzes **165,000+ historical dividend declarations** joined with **5 years of daily OHLCV US equity bars** across **HDFS / Apache Spark** to quantify ex-dividend price-drop recovery dynamics and transaction-cost-adjusted capture alpha.
+  - Engineers rolling liquidity, implied volatility proxy, payout ratio, and sector-momentum features to train a calibrated **Gradient-Boosted Tree (GBT)** classifier predicting 5-day post-ex-dividend recovery probability.
+  - Connects a live **Apache Kafka $\rightarrow$ Spark Structured Streaming** consumer that scores incoming market ticks and dividend announcements in real time with watermarked stateful aggregations.
+
+### 13. Low-Rank SVD World-Model Compression (LeWM)
+- **Category:** Deep Learning Systems & Model Predictive Control (MPC)
+- **Stack:** PyTorch, Singular Value Decomposition (SVD), Activation-Aware SVD, Cross-Entropy Method (CEM) MPC, `TwoRoom` & `PushT` Continuous Control
+- **Problem & Architecture:**
+  - Latent world models (`LeWM`) enable sample-efficient planning via **Cross-Entropy Method (CEM) Model Predictive Control (MPC)**, but dense MLP/Transformer transition predictors incur high per-rollout FLOPs and memory bandwidth when evaluating thousands of candidate action trajectories per control step.
+  - Applies post-training **uniform spectral SVD truncation** ($W \approx U_k \Sigma_k V_k^\top$) and **activation-aware SVD** (weighting singular vectors by empirical activation covariance $\Sigma_{\text{act}}^{1/2}$) across latent transition layers.
+  - Maps the **Rank-vs-Planning-Reward Pareto Frontier** on continuous-action `TwoRoom` navigation and `PushT` manipulation benchmarks, retaining **>96% planning success rate at 45% parameter compression** while accelerating batched CEM horizon rollouts by **1.72×**.
+
+### 14. Adaptive Real-Time ML Moderation & Drift Engine
+- **Category:** Applied NLP, Streaming Inference & MLOps
+- **Stack:** PyTorch, HuggingFace `DistilBERT`, Scikit-Learn TF-IDF Baselines, FastAPI, MinIO Object Storage, Active Learning
+- **Problem & Architecture:**
+  - Delivers **sub-150ms p95 latency** multi-label toxicity and policy-compliance classification trained and evaluated on **160,000+ labeled comments**.
+  - Pairs a quantized **fine-tuned `DistilBERT`** encoder with a fast calibrated **TF-IDF + Logistic Regression** cascade so high-confidence benign traffic exits early in `<8ms` while ambiguous samples route through the transformer.
+  - Stores immutable model checkpoints and evaluation manifests in **MinIO** and routes high-entropy predictions ($H(p) > \tau$) into a human-in-the-loop active-learning retraining queue to mitigate covariate shift.
+
+### 15. Multi-Service ChatOps Workflow & Incident Bot
+- **Category:** Enterprise Integrations & Event-Driven Automation
+- **Stack:** Python 3.11+, FastAPI, Slack Bolt SDK, GitHub Webhooks & Actions API, PostgreSQL, Idempotent State Machine
+- **Problem & Architecture:**
+  - Eliminates manual context switching across messaging, source control, and change-management ticketing by bridging **Slack**, **GitHub Issues/PRs**, and operational incident queues.
+  - Parses structured slash-command and modal requests, validates service-level preconditions, provisions linked tickets and branches, syncs merged PR changelogs, and broadcasts deployment readiness signals.
+  - Enforces webhook delivery deduplication via `X-GitHub-Delivery` / Slack event IDs in PostgreSQL, reducing end-to-end change-request handling latency by **95%** (from ~22 minutes of manual coordination to `<60 seconds`).
+
+### 16. Real-Time WebSocket Group Recommender & Matrix Factorization
+- **Category:** Real-Time Distributed State & Collaborative Filtering
+- **Stack:** PyTorch, FastAPI, WebSockets, Neural Matrix Factorization, Redis Pub/Sub, React & TypeScript
+- **Problem & Architecture:**
+  - Multi-user group recommendation engine where 2–12 participants join shared rooms via **FastAPI WebSockets** (`<200ms` state synchronization latency across 10+ concurrent rooms).
+  - Combines learned **PyTorch Neural Matrix Factorization (NMF)** user/item embeddings with an interactive **Pareto-fair group utility aggregator** (balancing mean group affinity against least-misery $\min_{u \in G} s(u, i)$ fairness constraints) that updates live rankings immediately as members swipe or re-weight genre constraints.
