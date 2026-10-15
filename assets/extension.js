@@ -1186,7 +1186,7 @@
       ['INSTITUTION', 'Northwestern University · CS & NICO'],
       ['LEAD RESEARCHER', 'Abdullah Azmi · Mudd Hall 3510'],
       ['METHODOLOGY', 'Computational / Dry Lab'],
-      ['OPEN-SOURCE SUITE', '24 Public Repos · 16 Core Systems']
+      ['OPEN-SOURCE SUITE', '30 Public Repos · 28 Standalone Systems']
     ];
     for (const [label, value] of metaRows) {
       const row = document.createElement('div');

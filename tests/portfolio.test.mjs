@@ -28,16 +28,22 @@ const CORE_16_REPOS = [
   'movie-recc'
 ];
 
-const ADDITIONAL_6_REPOS = [
+const ADDITIONAL_12_REPOS = [
   'sp500_platform',
   'AP-Study-Guide-Generator',
   'Environmental-Disaster-Classifier',
   'grab-pic',
   'comic-subscription',
-  'motorcycle-rideability-index'
+  'motorcycle-rideability-index',
+  'markov-music',
+  'NYC-Property-Scout',
+  'nitro-lab',
+  'Watch-Engine',
+  'ClaimLess',
+  'finsim'
 ];
 
-const ALL_22_REPOS = [...CORE_16_REPOS, ...ADDITIONAL_6_REPOS];
+const ALL_28_REPOS = [...CORE_16_REPOS, ...ADDITIONAL_12_REPOS];
 
 const HTML_PAGES = [
   { route: '/', relPath: 'index.html', canonical: 'https://abdullahazmi.com/' },
@@ -379,7 +385,7 @@ test('Static assets (SVG, PDF, JPEG, CSS, JS bundles) pass binary, syntax, and a
   }
 });
 
-test('All 16 core systems and 6 additional repositories link to standalone GitHub repositories with zero generic fallbacks', () => {
+test('All 16 core systems and 12 additional repositories (28 standalone project repos) link to standalone GitHub repositories with zero generic fallbacks', () => {
   const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const bundleJs = fs.readFileSync(path.join(ROOT, 'assets/index-VqgN4zkm.js'), 'utf8');
   const extensionJs = fs.readFileSync(path.join(ROOT, 'assets/extension.js'), 'utf8');
@@ -408,13 +414,14 @@ test('All 16 core systems and 6 additional repositories link to standalone GitHu
   for (const repo of CORE_16_REPOS) {
     const url = `https://github.com/aazminu/${repo}`;
     assert.ok(bundleJs.includes(url), `Main portfolio bundle missing standalone link ${url}`);
-    assert.ok(profilePlan.includes(url), `PROFILE_PLAN.md missing standalone link ${url}`);
   }
 
-  for (const repo of ALL_22_REPOS) {
+  for (const repo of ALL_28_REPOS) {
     const url = `https://github.com/aazminu/${repo}`;
+    assert.ok(indexHtml.includes(url), `index.html missing standalone repository link ${url}`);
     assert.ok(labHtml.includes(url), `lab/index.html missing standalone repository link ${url}`);
     assert.ok(researchHtml.includes(url), `research/index.html missing standalone repository link ${url}`);
+    assert.ok(profilePlan.includes(url), `PROFILE_PLAN.md missing standalone link ${url}`);
     assert.ok(readme.includes(url), `README.md missing repository link ${url}`);
     assert.ok(provenance.includes(url), `provenance.md missing repository link ${url}`);
   }
