@@ -68,3 +68,6 @@ The CGAS Lab software suite integrates publicly accessible, non-commercial scien
 | `assets/index-yL4Jrv0C.css` & `assets/extension.css` | Editorial light/dark design system (`Bricolage Grotesque`, `Archivo`, monospace telemetry, responsive grid, interactive workbench styles) |
 | `assets/abdullah-azmi-resume.pdf` | Publication-grade 1-page Curriculum Vitae & Systems Engineering Resume (mirrored at `assets/northwestern-student-resume.pdf` for backward link compatibility) |
 | `PROFILE_PLAN.md` | Full 16-system architectural specification and benchmark catalog |
+| `sitemap.xml` & `robots.txt` | Search engine crawl directives and XML sitemap indexing `/`, `/lab/`, `/research/`, and the CV PDF |
+| `tests/portfolio.test.mjs` | Automated `node --test` verification suite validating HTML structure, Schema.org JSON-LD, sitemap/robots.txt, binary/text asset integrity, and all 22 standalone GitHub repository links |
+
