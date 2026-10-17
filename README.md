@@ -53,6 +53,12 @@ Official researcher portfolio and **Computational Genomics & Agentic Systems (CG
 27. **[`aazminu/ClaimLess`](https://github.com/aazminu/ClaimLess)** — AI medical-bill auditing and patient advocacy engine with GPCI locality-adjusted CMS Medicare fee-schedule benchmarking, NCCI unbundling detection, and settlement strategy synthesis.
 28. **[`aazminu/finsim`](https://github.com/aazminu/finsim)** — Interactive historical market regime and portfolio simulator with CAGR/Sharpe/Sortino/VaR/CVaR risk analytics, cash-conserving SELL-first rebalancing, and seeded GBM Monte Carlo projections.
 
+### V. Verified Upstream Open-Source Pull Requests Merged (`author:aazminu`)
+- **[`exmergo/dex#634`](https://github.com/exmergo/dex/pull/634)** — *fix(transform): rewrite `ref()` sites when renaming seeds and snapshots (#628)*: Resolved target node kinds via `self.index.node_kind(name)` in `_Builder._matches` (`packages/dex-core/src/exmergo_dex_core/transform/propagate.py`) and checked all `_FILE_NODES` in `_refuse_surviving_reads` so `transform rename seed` and `transform rename snapshot` rewrite downstream `ref()` call sites and YAML references atomically.
+- **[`exmergo/dex#633`](https://github.com/exmergo/dex/pull/633)** — *fix(transform): preserve `dbt-core` 1.12 error cause behind level-tagged headers (#626)*: Updated `_GENERIC_HEADER` in `_collect_messages` (`packages/dex-core/src/exmergo_dex_core/transform/build.py`) to accept optional leading `[LEVEL]: ` tags in `dbt-core` 1.12 JSON log headers so underlying error causes remain attached during `shadow_parse` and `build`.
+- **[`GustavoBaranda/chatflow-agent#52`](https://github.com/GustavoBaranda/chatflow-agent/pull/52)** — *fix: restore active agent and metadata when a turn rollback occurs*: Checkpointed and restored `session.active_agent` and deep-copied `session.metadata` across both in-memory `SessionContext` and persistent `SQLiteSessionContext` (`chatflow_sessions`) when an unhandled exception triggers a turn rollback in `Runner.run_async()`.
+- **[`repowise-dev/repowise#3841`](https://github.com/repowise-dev/repowise/pull/3841)** — *fix(code-origin): recognise SwiftPM version-specific manifests as build files*: Extended `_BUILD_NAME_RE` (`packages/core/src/repowise/core/code_origin.py`) to classify version-specific Swift Package Manager manifests (`Package@swift-<version>.swift`) as `build` files without misclassifying ordinary Swift sources.
+
 ---
 
 ## Interactive Client-Side Workbench (`#workbench`)

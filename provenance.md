@@ -41,6 +41,15 @@ All core research packages, full-stack applications, and open-source platform co
 | [`aazminu/ClaimLess`](https://github.com/aazminu/ClaimLess) | Medical Bill CPT/NCCI Auditing Platform | Next.js, TypeScript, Node.js, GPCI locality-adjusted CMS Medicare fee benchmarker, NCCI unbundling detector, appeal synthesizer |
 | [`aazminu/finsim`](https://github.com/aazminu/finsim) | Historical Regime & Portfolio Risk Simulator | TypeScript, Express, React, CAGR/Sharpe/Sortino/VaR/CVaR analytics, cash-safe SELL-first rebalancer, seeded GBM Monte Carlo |
 
+### 1B. Verified Upstream Open-Source Pull Requests Merged (`author:aazminu`)
+
+| Upstream Pull Request | Domain & Upstream Project | Technical Resolution & Verification Suite |
+| :--- | :--- | :--- |
+| [`exmergo/dex#634`](https://github.com/exmergo/dex/pull/634) | Agent-Native Analytics Engineering (`exmergo/dex`) | Resolved `dbt` node kinds via `self.index.node_kind(name)` inside `_Builder._matches` (`transform/propagate.py`) and verified all `_FILE_NODES` in `_refuse_surviving_reads` so `transform rename seed` and `transform rename snapshot` rewrite downstream `ref()` call sites and YAML references atomically (`pytest` suite) |
+| [`exmergo/dex#633`](https://github.com/exmergo/dex/pull/633) | Agent-Native Analytics Engineering (`exmergo/dex`) | Updated `_GENERIC_HEADER` in `_collect_messages` (`transform/build.py`) to accept optional leading `[LEVEL]: ` tags in `dbt-core` 1.12 JSON log headers so root-cause error lines are preserved during `shadow_parse` and `build` (`pytest` suite) |
+| [`GustavoBaranda/chatflow-agent#52`](https://github.com/GustavoBaranda/chatflow-agent/pull/52) | Async Multi-Agent Runtime (`GustavoBaranda/chatflow-agent`) | Checkpointed and restored `session.active_agent` and deep-copied `session.metadata` across both in-memory `SessionContext` and persistent `SQLiteSessionContext` (`chatflow_sessions`) when an unhandled exception triggers a turn rollback in `Runner.run_async()` (190 `pytest` tests passing) |
+| [`repowise-dev/repowise#3841`](https://github.com/repowise-dev/repowise/pull/3841) | Codebase Intelligence & Dead-Code Graph (`repowise-dev/repowise`) | Extended `_BUILD_NAME_RE` (`code_origin.py`) to recognize version-specific Swift Package Manager manifests (`Package@swift-<version>.swift`) as `build` files without misclassifying ordinary Swift sources, eliminating false-positive dead-code flags (`pytest` unit & dead-code suites) |
+
 ---
 
 ## 2. Scientific Reference Databases & Benchmark Provenance
@@ -69,12 +78,13 @@ The CGAS Lab software suite integrates publicly accessible, non-commercial scien
 | `index.html` | Main researcher & engineering portfolio entry point (`https://abdullahazmi.com/`) |
 | `lab/index.html` | Dedicated CGAS Research Lab portal (`https://abdullahazmi.com/lab/`) |
 | `research/index.html` | Mirror research portal endpoint (`https://abdullahazmi.com/research/`) |
-| `assets/index-VqgN4zkm.js` | Core React 18 application bundle (Hero, 4 Experience appointments, 16 Software & Model cards, Footer) |
+| `assets/index-2552cda7.js` & `assets/index-VqgN4zkm.js` | Core React 18 application bundle (Hero, 4 Experience appointments, 16 Software & Model cards, Footer) |
 | `assets/extension.js` | Progressive enhancement module injecting the Featured Flagship Banner, Interactive Category Filter & Search Bar, 4-Tab Interactive Scientific & Systems Workbench (`#workbench`), 5 Technical Lab Notes (`#lab-notes`), CGAS Lab Overview (`#research-lab`), and Lab Visual Gallery |
 | `assets/index-yL4Jrv0C.css` & `assets/extension.css` | Editorial light/dark design system (`Bricolage Grotesque`, `Archivo`, monospace telemetry, responsive grid, interactive workbench styles) |
 | `assets/abdullah-azmi-resume.pdf` | Publication-grade 1-page Curriculum Vitae & Systems Engineering Resume (mirrored at `assets/northwestern-student-resume.pdf` for backward link compatibility) |
-| `PROFILE_PLAN.md` | Full 28-system architectural specification and benchmark catalog |
+| `PROFILE_PLAN.md` | Full 28-system architectural specification, benchmark catalog, and verified upstream open-source contribution log |
 | `sitemap.xml` & `robots.txt` | Search engine crawl directives and XML sitemap indexing `/`, `/lab/`, `/research/`, and the CV PDF |
-| `tests/portfolio.test.mjs` | Automated `node --test` verification suite validating HTML structure, Schema.org JSON-LD, sitemap/robots.txt, binary/text asset integrity, and all 28 standalone GitHub repository links |
+| `tests/portfolio.test.mjs` | Automated `node --test` verification suite validating HTML structure, Schema.org JSON-LD, sitemap/robots.txt, binary/text asset integrity, all 28 standalone GitHub repository links, and verified upstream open-source PR links |
+
 
 

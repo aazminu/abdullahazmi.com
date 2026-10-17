@@ -45,6 +45,13 @@ const ADDITIONAL_12_REPOS = [
 
 const ALL_28_REPOS = [...CORE_16_REPOS, ...ADDITIONAL_12_REPOS];
 
+const VERIFIED_UPSTREAM_PRS = [
+  'https://github.com/exmergo/dex/pull/634',
+  'https://github.com/exmergo/dex/pull/633',
+  'https://github.com/GustavoBaranda/chatflow-agent/pull/52',
+  'https://github.com/repowise-dev/repowise/pull/3841'
+];
+
 const HTML_PAGES = [
   { route: '/', relPath: 'index.html', canonical: 'https://abdullahazmi.com/' },
   { route: '/lab/', relPath: 'lab/index.html', canonical: 'https://abdullahazmi.com/lab/' },
@@ -356,7 +363,7 @@ test('Static assets (SVG, PDF, JPEG, CSS, JS bundles) pass binary, syntax, and a
   const extensionCss = fs.readFileSync(path.join(ROOT, 'assets/extension.css'), 'utf8');
   assert.match(extensionCss, /min-width:\s*0[\s\S]*?max-width:\s*100%/i, 'extension.css must enforce min-width: 0 and max-width: 100% against mobile horizontal overflow');
 
-  for (const jsRel of ['assets/index-VqgN4zkm.js', 'assets/extension.js']) {
+  for (const jsRel of ['assets/index-2552cda7.js', 'assets/index-VqgN4zkm.js', 'assets/extension.js']) {
     const jsContent = fs.readFileSync(path.join(ROOT, jsRel), 'utf8');
     assert.doesNotThrow(
       () => new vm.Script(jsContent, { filename: jsRel }),
@@ -385,9 +392,10 @@ test('Static assets (SVG, PDF, JPEG, CSS, JS bundles) pass binary, syntax, and a
   }
 });
 
-test('All 16 core systems and 12 additional repositories (28 standalone project repos) link to standalone GitHub repositories with zero generic fallbacks', () => {
+test('All 16 core systems, 12 additional repositories (28 standalone project repos), and 4 verified upstream open-source PRs are linked with zero generic fallbacks', () => {
   const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
   const bundleJs = fs.readFileSync(path.join(ROOT, 'assets/index-VqgN4zkm.js'), 'utf8');
+  const bundleVersionedJs = fs.readFileSync(path.join(ROOT, 'assets/index-2552cda7.js'), 'utf8');
   const extensionJs = fs.readFileSync(path.join(ROOT, 'assets/extension.js'), 'utf8');
   const labHtml = fs.readFileSync(path.join(ROOT, 'lab/index.html'), 'utf8');
   const researchHtml = fs.readFileSync(path.join(ROOT, 'research/index.html'), 'utf8');
@@ -398,6 +406,7 @@ test('All 16 core systems and 12 additional repositories (28 standalone project 
   for (const [name, content] of [
     ['index.html', indexHtml],
     ['assets/index-VqgN4zkm.js', bundleJs],
+    ['assets/index-2552cda7.js', bundleVersionedJs],
     ['assets/extension.js', extensionJs],
     ['lab/index.html', labHtml],
     ['research/index.html', researchHtml],
@@ -414,6 +423,7 @@ test('All 16 core systems and 12 additional repositories (28 standalone project 
   for (const repo of CORE_16_REPOS) {
     const url = `https://github.com/aazminu/${repo}`;
     assert.ok(bundleJs.includes(url), `Main portfolio bundle missing standalone link ${url}`);
+    assert.ok(bundleVersionedJs.includes(url), `Versioned portfolio bundle missing standalone link ${url}`);
   }
 
   assert.ok(
@@ -431,11 +441,28 @@ test('All 16 core systems and 12 additional repositories (28 standalone project 
     assert.ok(readme.includes(url), `README.md missing repository link ${url}`);
     assert.ok(provenance.includes(url), `provenance.md missing repository link ${url}`);
   }
+
+  for (const prUrl of VERIFIED_UPSTREAM_PRS) {
+    assert.ok(extensionJs.includes(prUrl), `assets/extension.js missing verified upstream PR link ${prUrl}`);
+    assert.ok(labHtml.includes(prUrl), `lab/index.html missing verified upstream PR link ${prUrl}`);
+    assert.ok(researchHtml.includes(prUrl), `research/index.html missing verified upstream PR link ${prUrl}`);
+    assert.ok(profilePlan.includes(prUrl), `PROFILE_PLAN.md missing verified upstream PR link ${prUrl}`);
+    assert.ok(readme.includes(prUrl), `README.md missing verified upstream PR link ${prUrl}`);
+    assert.ok(provenance.includes(prUrl), `provenance.md missing verified upstream PR link ${prUrl}`);
+  }
 });
 
 test('Validator helpers handle empty inputs, unquoted/reordered attributes, external schemes, and path traversal safely', () => {
   assert.deepStrictEqual(extractJsonLdBlocks(''), []);
+  assert.deepStrictEqual(extractJsonLdBlocks(null), []);
+  assert.deepStrictEqual(extractJsonLdBlocks(undefined), []);
   assert.deepStrictEqual(extractJsonLdBlocks('<html><head></head></html>'), []);
+  assert.deepStrictEqual(extractRelativeAssetRefs(null), []);
+  assert.deepStrictEqual(extractJsRelativeRefs(null), []);
+  assert.strictEqual(new Set(VERIFIED_UPSTREAM_PRS).size, 4, 'VERIFIED_UPSTREAM_PRS must contain 4 distinct URLs');
+  for (const prUrl of VERIFIED_UPSTREAM_PRS) {
+    assert.match(prUrl, /^https:\/\/github\.com\/(?!aazminu\/)[^/]+\/[^/]+\/pull\/\d+$/, `Invalid external PR URL: ${prUrl}`);
+  }
   assert.deepStrictEqual(
     extractJsonLdBlocks('<script id="ld-1" type="application/ld+json; charset=utf-8">{"@context":"https://schema.org"}</script><script type=application/ld+json>{"@type":"Person"}</script>'),
     ['{"@context":"https://schema.org"}', '{"@type":"Person"}']
@@ -462,6 +489,10 @@ test('Validator helpers handle empty inputs, unquoted/reordered attributes, exte
   assert.throws(
     () => resolveLocalAssetPath(ROOT, ROOT, '../../outside.txt'),
     /escapes site root/
+  );
+  assert.throws(
+    () => resolveLocalAssetPath(ROOT, ROOT, '//protocol-relative.js'),
+    /Invalid local asset reference/
   );
 
   assert.strictEqual(mapSitemapUrlToLocalPath('https://abdullahazmi.com/'), 'index.html');
