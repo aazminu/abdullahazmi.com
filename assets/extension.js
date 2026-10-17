@@ -1286,6 +1286,40 @@
     catalogCard.append(catalogLinks);
     grid.append(catalogCard);
 
+    const upstreamPrs = [
+      ['exmergo/dex#634', 'https://github.com/exmergo/dex/pull/634'],
+      ['exmergo/dex#633', 'https://github.com/exmergo/dex/pull/633'],
+      ['GustavoBaranda/chatflow-agent#52', 'https://github.com/GustavoBaranda/chatflow-agent/pull/52'],
+      ['repowise-dev/repowise#3841', 'https://github.com/repowise-dev/repowise/pull/3841']
+    ];
+    const upstreamCard = document.createElement('article');
+    upstreamCard.className = '_card_1aul7_24';
+    upstreamCard.style.gridColumn = '1 / -1';
+    upstreamCard.append(
+      createText('h2', '_name_1aul7_33', 'Verified Upstream Open-Source Pull Requests Merged (author:aazminu)'),
+      createText(
+        'span',
+        '_award_1aul7_42',
+        'External Upstream Engineering · exmergo/dex · GustavoBaranda/chatflow-agent · repowise-dev/repowise'
+      ),
+      createText(
+        'p',
+        '_description_1aul7_63',
+        'Merged upstream pull requests across external open-source ecosystems: rewriting downstream ref() call sites and YAML node references when renaming dbt seeds and snapshots in exmergo/dex (#634), preserving dbt-core 1.12 error causes behind level-tagged JSON log headers in exmergo/dex (#633), restoring active-agent and session metadata across in-memory and SQLite stores on turn rollback in GustavoBaranda/chatflow-agent (#52), and recognizing version-specific SwiftPM manifests (Package@swift-*.swift) as build files in repowise-dev/repowise (#3841).'
+      )
+    );
+    const upstreamLinks = document.createElement('div');
+    upstreamLinks.className = 'portfolio-lab__card-links';
+    for (const [label, url] of upstreamPrs) {
+      const a = createText('a', '_link_1aul7_72', `${label} ↗`);
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noreferrer';
+      upstreamLinks.append(a);
+    }
+    upstreamCard.append(upstreamLinks);
+    grid.append(upstreamCard);
+
     section.append(grid);
 
     const fieldSection = document.querySelector('.portfolio-field');

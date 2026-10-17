@@ -12,6 +12,7 @@ This specification documents the 28 scientific, full-stack, distributed-data, ap
 
 1. **Computational Genomics & Agentic Systems (CGAS) Lab Research Suite (Systems 01–04):** Autonomous multi-hop scientific literature synthesis (`PaperPulse`), base-resolution cis-regulatory and splice-disruption variant attribution (`ChromAlphaGenome`), exact recursive Bayesian state-space trajectory filtering (`BayesKalmanTrace`), and AlphaFold 3 PAE domain partitioning coupled with semiempirical tight-binding quantum pocket energetics (`FoldEnergetics-xTB`).
 2. **Production Full-Stack, Distributed Data, Applied ML & Open-Source Systems (Systems 05–28):** Idempotent container-yard inventory and month-end billing (`Airtight Container`), bounded asynchronous entity enrichment (`LeadAI`), reviewed open-source platform engineering (`Khoury Odyssey`, `Mermaid`, `FarmData2`), distributed tabular validation (`ScrubData`), cycle-accurate processor simulation (`RISC-V RV32I`), streaming financial alpha pipelines (`Spark/Kafka Dividend Capture`), spectral world-model compression (`LeWM SVD`), low-latency ML moderation (`DistilBERT`), multi-service ChatOps orchestration, real-time WebSocket collaborative filtering, S&P 500 conviction optimization, sliding-window RAG study generation, geospatial hazard classification, GhostFaceNet selfie search, variable-order Markov musical synthesis (`markov-music`), NYC BBL geospatial valuation (`NYC-Property-Scout`), SSE Docker fleet telemetry (`nitro-lab`), hybrid BM25+vector RRF search (`Watch-Engine`), deterministic CPT/NCCI medical bill auditing (`ClaimLess`), and quantitative portfolio simulation (`finsim`).
+3. **Verified Upstream Open-Source Pull Requests Merged Under `aazminu`:** Reviewed and merged upstream fixes across external open-source ecosystems including agent-native analytics engineering and `dbt` AST transformation (`exmergo/dex` [#634](https://github.com/exmergo/dex/pull/634) and [#633](https://github.com/exmergo/dex/pull/633)), asynchronous multi-agent session rollback persistence (`GustavoBaranda/chatflow-agent` [#52](https://github.com/GustavoBaranda/chatflow-agent/pull/52)), and codebase intelligence / dead-code graph analysis (`repowise-dev/repowise` [#3841](https://github.com/repowise-dev/repowise/pull/3841)).
 
 ---
 
@@ -222,4 +223,31 @@ This specification documents the 28 scientific, full-stack, distributed-data, ap
 - **Repository:** [`github.com/aazminu/finsim`](https://github.com/aazminu/finsim)
 - **Stack:** TypeScript, Express, React, Quantitative Risk Engine, Seeded Monte Carlo GBM
 - **Architecture & Verification:** Computes CAGR, annualized volatility, Sharpe/Sortino ratios, maximum drawdown, and historical 95% VaR/CVaR across historical macro regimes, generates cash-conserving SELL-first drift rebalancing trades, and runs deterministic seeded Box–Muller Geometric Brownian Motion (GBM) Monte Carlo wealth fan-chart projections.
+
+---
+
+## Part V · Verified Upstream Open-Source Contributions Merged Under `aazminu`
+
+Alongside the 28 standalone repositories hosted under [`github.com/aazminu`](https://github.com/aazminu), the following upstream pull requests authored by Abdullah Azmi (`aazminu`) have been reviewed and merged into external open-source repositories:
+
+### 1. `exmergo/dex` — Rewrite `ref()` Call Sites When Renaming Seeds & Snapshots ([PR #634](https://github.com/exmergo/dex/pull/634))
+- **Upstream Repository:** [`github.com/exmergo/dex`](https://github.com/exmergo/dex) (Agent-Native Analytics Engineering & `dbt` Transformation Toolkit)
+- **Merged PR:** [`https://github.com/exmergo/dex/pull/634`](https://github.com/exmergo/dex/pull/634) (`+81/−1` across `packages/dex-core/src/exmergo_dex_core/transform/propagate.py` and `packages/dex-core/tests/transform/test_propagate.py`)
+- **Architecture & Verification:** Resolved node kinds through `self.index.node_kind(name)` inside `_Builder._matches` when matching `ref()` and YAML node sites, and inspected all `_FILE_NODES` in `_refuse_surviving_reads` after post-delete removal so `transform rename seed` and `transform rename snapshot` rewrite downstream `ref()` references atomically.
+
+### 2. `exmergo/dex` — Preserve `dbt-core` 1.12 Error Cause Behind Level-Tagged Headers ([PR #633](https://github.com/exmergo/dex/pull/633))
+- **Upstream Repository:** [`github.com/exmergo/dex`](https://github.com/exmergo/dex) (Agent-Native Analytics Engineering & `dbt` Transformation Toolkit)
+- **Merged PR:** [`https://github.com/exmergo/dex/pull/633`](https://github.com/exmergo/dex/pull/633) (`+50/−1` across `packages/dex-core/src/exmergo_dex_core/transform/build.py` and `packages/dex-core/tests/transform/test_parse.py`)
+- **Architecture & Verification:** Updated `_GENERIC_HEADER` in `_collect_messages` to accept optional leading `[LEVEL]: ` tags emitted by `dbt-core` 1.12 JSON log headers (`[ERROR]: Encountered an error:`), preserving the underlying root-cause diagnostic line during `shadow_parse` and `build`.
+
+### 3. `GustavoBaranda/chatflow-agent` — Restore Active Agent & Metadata on Turn Rollback ([PR #52](https://github.com/GustavoBaranda/chatflow-agent/pull/52))
+- **Upstream Repository:** [`github.com/GustavoBaranda/chatflow-agent`](https://github.com/GustavoBaranda/chatflow-agent) (Async Multi-Agent Framework with Native SQLite Persistence & Channel Handoffs)
+- **Merged PR:** [`https://github.com/GustavoBaranda/chatflow-agent/pull/52`](https://github.com/GustavoBaranda/chatflow-agent/pull/52) (`+225/−7` across `src/chatflow_agent/core/runner.py`, `src/chatflow_agent/core/memory.py`, and `tests/test_runner_rollback.py`)
+- **Architecture & Verification:** Checkpointed `session.active_agent` and deep-copied `session.metadata` at the start of `Runner.run_async()`, restoring both in memory (`SessionContext`) and in SQLite (`SQLiteSessionContext` / `chatflow_sessions`) when an unhandled exception triggers a turn rollback after an in-turn agent handoff or metadata mutation (190 `pytest` tests passing).
+
+### 4. `repowise-dev/repowise` — Recognise SwiftPM Version-Specific Manifests as Build Files ([PR #3841](https://github.com/repowise-dev/repowise/pull/3841))
+- **Upstream Repository:** [`github.com/repowise-dev/repowise`](https://github.com/repowise-dev/repowise) (Codebase Intelligence, Dead-Code Detection & Architectural Graph Engine via MCP)
+- **Merged PR:** [`https://github.com/repowise-dev/repowise/pull/3841`](https://github.com/repowise-dev/repowise/pull/3841) (`+66/−1` across `packages/core/src/repowise/core/code_origin.py`, `tests/unit/test_code_origin.py`, and `tests/unit/dead_code/test_convention_never_flag.py`)
+- **Architecture & Verification:** Extended `_BUILD_NAME_RE` with `^package@swift-\d+(?:\.\d+){0,2}\.swift$` so Swift Package Manager version-specific manifests (`Package@swift-6.0.swift`, `Package@swift-5.10.swift`, `Package@swift-6.swift`) are classified as `build` files by `is_build_file` and `code_origin` without misclassifying ordinary Swift sources (`PackageManager.swift`, `Package+Extensions.swift`).
+
 
