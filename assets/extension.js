@@ -1261,6 +1261,17 @@
     const catalogCard = document.createElement('article');
     catalogCard.className = '_card_1aul7_24';
     catalogCard.style.gridColumn = '1 / -1';
+    const catalogTech = document.createElement('ul');
+    catalogTech.className = '_tech_1aul7_51';
+    for (const item of [
+      '28 Standalone GitHub Repos',
+      '4 CGAS Flagship Packages',
+      '5 Production & OSS Systems',
+      '19 Systems, Data & ML Repos',
+      'Automated CI & Test Suites'
+    ]) {
+      catalogTech.append(createText('li', '', item));
+    }
     catalogCard.append(
       createText('h2', '_name_1aul7_33', 'Complete Standalone Engineering & Research Suite (28 Public Repositories)'),
       createText(
@@ -1268,6 +1279,7 @@
         '_award_1aul7_42',
         'CGAS Lab Scientific Packages · Distributed Data & ML · Full-Stack Systems · Quantitative Analytics'
       ),
+      catalogTech,
       createText(
         'p',
         '_description_1aul7_63',
@@ -1295,6 +1307,18 @@
     const upstreamCard = document.createElement('article');
     upstreamCard.className = '_card_1aul7_24';
     upstreamCard.style.gridColumn = '1 / -1';
+    const upstreamTech = document.createElement('ul');
+    upstreamTech.className = '_tech_1aul7_51';
+    for (const item of [
+      'exmergo/dex #634 & #633',
+      'GustavoBaranda/chatflow-agent #52',
+      'repowise-dev/repowise #3841',
+      'Python & dbt AST',
+      'Async Multi-Agent Rollback',
+      'SwiftPM Dead-Code Graph'
+    ]) {
+      upstreamTech.append(createText('li', '', item));
+    }
     upstreamCard.append(
       createText('h2', '_name_1aul7_33', 'Verified Upstream Open-Source Pull Requests Merged (author:aazminu)'),
       createText(
@@ -1302,6 +1326,7 @@
         '_award_1aul7_42',
         'External Upstream Engineering · exmergo/dex · GustavoBaranda/chatflow-agent · repowise-dev/repowise'
       ),
+      upstreamTech,
       createText(
         'p',
         '_description_1aul7_63',
