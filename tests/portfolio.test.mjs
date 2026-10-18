@@ -354,6 +354,12 @@ test('Static assets (SVG, PDF, JPEG, CSS, JS bundles) pass binary, syntax, and a
   assert.ok(pdfPrimary.equals(pdfMirror), 'Primary and mirror resume PDFs must be byte-identical');
 
   const jpgFiles = [
+    'assets/field-cox.jpg',
+    'assets/field-fanniemae.jpg',
+    'assets/field-haven.jpg',
+    'assets/field-unt.jpg',
+    'assets/field-hacksmu.jpg',
+    'assets/field-axxess.jpg',
     'assets/field-city.jpg',
     'assets/field-team.jpg',
     'assets/field-workspace.jpg'
@@ -699,7 +705,7 @@ test('assets/extension.js executes in a DOM harness and renders featured banner,
 
   const fieldGallery = root.querySelector('.portfolio-field');
   assert.ok(fieldGallery, 'extension.js must mount .portfolio-field');
-  assert.strictEqual(fieldGallery.querySelectorAll('figure').length, 3, '.portfolio-field must render 3 figures');
+  assert.strictEqual(fieldGallery.querySelectorAll('figure').length, 6, '.portfolio-field must render 6 figures');
 
   const researchLab = document.getElementById('research-lab');
   assert.ok(researchLab, 'extension.js must mount #research-lab');

@@ -1,28 +1,66 @@
 (() => {
   const projectDescriptions = [
     {
-      src: './assets/field-team.jpg',
-      alt: 'CGAS Lab researchers discussing multi-agent knowledge graph benchmarks around a workstation at Mudd Hall.',
+      src: './assets/field-cox.jpg',
+      alt: 'Orientation at Cox Headquarters — Dunwoody, GA',
       number: 'FIG. 01',
-      badge: 'MUDD HALL · NU',
-      title: 'CGAS Lab Symposium',
-      caption: 'Reviewing multi-hop citation provenance (PaperPulse) and regulatory variant attribution benchmarks at Mudd Hall.'
+      badge: 'DUNWOODY, GA · COX HQ',
+      title: 'Orientation at Cox Headquarters — Dunwoody, GA',
+      caption: 'Engineering orientation at Cox Headquarters in Dunwoody, GA — shipping Point Predictive (BorrowerCheck) integrations and cloud observability workflows.',
+      span: 'col-span-7',
+      ratio: '16 / 10'
     },
     {
-      src: './assets/field-workspace.jpg',
-      alt: 'Computational dry-lab working session running Quest HPC and AlphaGenome chromatin accessibility jobs.',
+      src: './assets/field-fanniemae.jpg',
+      alt: 'Presenting Haven to Fannie Mae — Plano, TX',
       number: 'FIG. 02',
-      badge: 'DRY LAB · QUEST HPC',
-      title: 'Computational Working Session',
-      caption: 'Calibrating recursive Bayesian state-space estimators and ChromAlphaGenome splice-disruption models across ClinVar cohorts.'
+      badge: 'PLANO, TX · FANNIE MAE',
+      title: 'Presenting Haven to Fannie Mae — Plano, TX',
+      caption: 'Presenting Haven — AI-driven personalized home matching and buyer validation — to Fannie Mae engineering leadership in Plano, TX.',
+      span: 'col-span-5',
+      ratio: '16 / 10'
     },
     {
-      src: './assets/field-city.jpg',
-      alt: 'Research corridor connecting Evanston McCormick School of Engineering and downtown scientific institutes.',
+      src: './assets/field-haven.jpg',
+      alt: 'Haven — Fannie Mae Challenge, 1st Place @ HackUTD 2023',
       number: 'FIG. 03',
-      badge: 'EVANSTON & NYC',
-      title: 'Northwestern Research & Engineering Corridor',
-      caption: 'Cross-disciplinary systems engineering bridging Computer Science, NICO complex systems, structural bioinformatics, and production software.'
+      badge: 'HACKUTD X · 1ST PLACE',
+      title: 'Haven — Fannie Mae Challenge, 1st Place @ HackUTD 2023',
+      caption: '1st Place winner in the Fannie Mae Challenge at HackUTD X (Nov 2023) for AI-assisted housing search and buyer readiness scoring.',
+      span: 'col-span-4',
+      ratio: '4 / 3'
+    },
+    {
+      src: './assets/field-unt.jpg',
+      alt: 'UtiliTrack — CBRE 1st & Overall 3rd @ HackUNT 2024',
+      number: 'FIG. 04',
+      badge: 'HACKUNT 2024 · CBRE 1ST',
+      title: 'UtiliTrack — CBRE 1st & Overall 3rd @ HackUNT 2024',
+      caption: 'Dual winner (1st Place CBRE Challenge & 3rd Place Overall) at HackUNT 2024 for automated facility maintenance scheduling and energy telemetry.',
+      span: 'col-span-4',
+      ratio: '4 / 3'
+    },
+    {
+      src: './assets/field-hacksmu.jpg',
+      alt: 'Park-EZ — SMU OIT Challenge, 1st Place @ HackSMU 2024',
+      number: 'FIG. 05',
+      badge: 'HACKSMU VI · 1ST PLACE',
+      title: 'Park-EZ — SMU OIT Challenge, 1st Place @ HackSMU 2024',
+      caption: '1st Place winner in the SMU OIT Challenge at HackSMU VI (Oct 2024) for real-time computer-vision accessible parking detection.',
+      span: 'col-span-4',
+      ratio: '4 / 3',
+      objectPosition: 'center 30%'
+    },
+    {
+      src: './assets/field-axxess.jpg',
+      alt: 'Our first hackathon — Axxess Hackathon 2023',
+      number: 'FIG. 06',
+      badge: 'AXXESS HACKATHON 2023',
+      title: 'Our first hackathon — Axxess Hackathon 2023',
+      caption: 'Where the hackathon streak started — building ChatPHD.co (clinical symptom triage and diagnostic guidance) at Axxess Hackathon 2023.',
+      span: 'col-span-12',
+      ratio: '21 / 9',
+      objectPosition: 'center 30%'
     }
   ];
 
@@ -1076,24 +1114,30 @@
 
     const head = document.createElement('div');
     head.className = 'sectionHead portfolio-field__head';
-    head.append(createText('p', 'sectionLabel', 'Northwestern University · Evanston, Chicago & New York'));
-    const title = createText('h1', 'portfolio-field__title', 'In the Lab');
+    head.append(createText('p', 'sectionLabel', '05 — Gallery · Wins & Moments Across Hackathons & Engineering'));
+    const title = createText('h1', 'portfolio-field__title', 'In the Field');
     title.id = 'portfolio-field-title';
     head.append(title);
     section.append(head);
 
     const gallery = document.createElement('div');
     gallery.className = 'portfolio-field__grid';
-    gallery.setAttribute('aria-label', 'CGAS Lab research environment');
+    gallery.setAttribute('aria-label', 'In the Field — Wins and engineering moments');
     for (const item of projectDescriptions) {
       const figure = document.createElement('figure');
-      figure.className = 'portfolio-field__figure';
+      figure.className = `portfolio-field__figure${item.span ? ` portfolio-field__figure--${item.span}` : ''}`;
       const frame = document.createElement('div');
       frame.className = 'portfolio-field__image';
+      if (item.ratio) {
+        frame.style.aspectRatio = item.ratio;
+      }
       const image = document.createElement('img');
       image.src = item.src;
       image.alt = item.alt;
       image.loading = 'lazy';
+      if (item.objectPosition) {
+        image.style.objectPosition = item.objectPosition;
+      }
       const badgeTag = createText('span', 'portfolio-field__sample', item.badge);
       frame.append(image, badgeTag);
 
