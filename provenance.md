@@ -1,7 +1,7 @@
 # Scientific Dataset, Benchmark & Software Provenance (`abdullahazmi.com`)
 
 **Organization:** Computational Genomics & Agentic Systems (CGAS) Lab · Department of Computer Science & Northwestern Institute on Complex Systems (NICO), Northwestern University  
-**Lead Researcher:** Abdullah Azmi (`m4u5t4@u.northwestern.edu` · `erlokix@gmail.com` · [ORCID: 0009-0004-8172-6394](https://orcid.org/0009-0004-8172-6394))  
+**Lead Researcher:** Abdullah Azmi (`m4u5t4@u.northwestern.edu` · [ORCID: 0009-0005-2720-3347](https://orcid.org/0009-0005-2720-3347))<br />
 **Primary Portals:** [https://abdullahazmi.com/](https://abdullahazmi.com/) · [https://abdullahazmi.com/lab/](https://abdullahazmi.com/lab/) · [https://github.com/aazminu](https://github.com/aazminu)
 
 ---
@@ -71,7 +71,11 @@ The CGAS Lab software suite integrates publicly accessible, non-commercial scien
 
 ---
 
-## 3. Portal Architecture & Static Asset Inventory
+## 3. Proposed Research Programme
+
+The prospective 6–12-month programme asks whether PaperPulse's source-grounded literature evidence improves the traceability and prioritization of ChromAlphaGenome regulatory variants compared with a fixed baseline. Planned first-six-month artifacts are versioned data manifests, a benchmark, reproducible agent skills, and a fixed-baseline versus agent-assisted evaluation. Months 6–12 are reserved for replication, error analysis, and preparing a methods submission. These are planned activities; this provenance document does not claim completed experimental results. The programme overview is at [`/lab/#programme`](https://abdullahazmi.com/lab/#programme).
+
+## 4. Portal Architecture & Static Asset Inventory
 
 | Asset / File | Purpose |
 | :--- | :--- |

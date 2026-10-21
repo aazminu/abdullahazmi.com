@@ -3,7 +3,7 @@
 [![Live Site](https://img.shields.io/badge/Live_Portal-abdullahazmi.com-5B6437?style=flat-square)](https://abdullahazmi.com/)
 [![CGAS Lab](https://img.shields.io/badge/Research_Lab-abdullahazmi.com%2Flab-3A2A1C?style=flat-square)](https://abdullahazmi.com/lab/)
 [![GitHub](https://img.shields.io/badge/GitHub-github.com%2Faazminu-181717?style=flat-square&logo=github)](https://github.com/aazminu)
-[![ORCID](https://img.shields.io/badge/ORCID-0009--0004--8172--6394-A6CE39?style=flat-square&logo=orcid)](https://orcid.org/0009-0004-8172-6394)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0005--2720--3347-A6CE39?style=flat-square&logo=orcid)](https://orcid.org/0009-0005-2720-3347)
 
 Official researcher portfolio and **Computational Genomics & Agentic Systems (CGAS) Lab** portal for **Abdullah Azmi** at **Northwestern University** (Department of Computer Science & Northwestern Institute on Complex Systems — NICO).
 
@@ -12,6 +12,10 @@ Official researcher portfolio and **Computational Genomics & Agentic Systems (CG
 - **Curriculum Vitae / Engineering Resume (PDF):** [`assets/abdullah-azmi-resume.pdf`](https://abdullahazmi.com/assets/abdullah-azmi-resume.pdf)
 - **28-System Architectural Catalog:** [`PROFILE_PLAN.md`](./PROFILE_PLAN.md)
 - **Dataset & Benchmark Provenance:** [`provenance.md`](./provenance.md)
+
+## Proposed Research Programme (6–12 Months)
+
+The prospective research question is whether combining PaperPulse's source-grounded literature evidence with ChromAlphaGenome's regulatory-variant prioritization improves evidence traceability and prioritization against a fixed baseline. The planned first six months cover versioned data manifests, a benchmark, reproducible agent skills, and fixed-baseline versus agent-assisted evaluation; months 6–12 are for replication, error analysis, and preparing a methods submission. This is a plan, not a report of completed results. See the [programme overview](/lab/#programme).
 
 ---
 

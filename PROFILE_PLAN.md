@@ -1,8 +1,8 @@
 # Abdullah Azmi · CGAS Lab & Systems Engineering Catalog (28 Systems)
 
-**Lead Researcher & Principal Systems Architect:** Abdullah Azmi (`m4u5t4@u.northwestern.edu` · `erlokix@gmail.com`)  
+**Lead Researcher & Principal Systems Architect:** Abdullah Azmi (`m4u5t4@u.northwestern.edu`)<br />
 **Affiliations:** Computational Genomics & Agentic Systems (CGAS) Lab · Department of Computer Science & Northwestern Institute on Complex Systems (NICO), Northwestern University  
-**Portals:** [abdullahazmi.com](https://abdullahazmi.com/) · [abdullahazmi.com/lab](https://abdullahazmi.com/lab/) · [github.com/aazminu](https://github.com/aazminu) · [ORCID: 0009-0004-8172-6394](https://orcid.org/0009-0004-8172-6394)
+**Portals:** [abdullahazmi.com](https://abdullahazmi.com/) · [abdullahazmi.com/lab](https://abdullahazmi.com/lab/) · [github.com/aazminu](https://github.com/aazminu) · [ORCID: 0009-0005-2720-3347](https://orcid.org/0009-0005-2720-3347)
 
 ---
 
@@ -13,6 +13,10 @@ This specification documents the 28 scientific, full-stack, distributed-data, ap
 1. **Computational Genomics & Agentic Systems (CGAS) Lab Research Suite (Systems 01–04):** Autonomous multi-hop scientific literature synthesis (`PaperPulse`), base-resolution cis-regulatory and splice-disruption variant attribution (`ChromAlphaGenome`), exact recursive Bayesian state-space trajectory filtering (`BayesKalmanTrace`), and AlphaFold 3 PAE domain partitioning coupled with semiempirical tight-binding quantum pocket energetics (`FoldEnergetics-xTB`).
 2. **Production Full-Stack, Distributed Data, Applied ML & Open-Source Systems (Systems 05–28):** Idempotent container-yard inventory and month-end billing (`Airtight Container`), bounded asynchronous entity enrichment (`LeadAI`), reviewed open-source platform engineering (`Khoury Odyssey`, `Mermaid`, `FarmData2`), distributed tabular validation (`ScrubData`), cycle-accurate processor simulation (`RISC-V RV32I`), streaming financial alpha pipelines (`Spark/Kafka Dividend Capture`), spectral world-model compression (`LeWM SVD`), low-latency ML moderation (`DistilBERT`), multi-service ChatOps orchestration, real-time WebSocket collaborative filtering, S&P 500 conviction optimization, sliding-window RAG study generation, geospatial hazard classification, GhostFaceNet selfie search, variable-order Markov musical synthesis (`markov-music`), NYC BBL geospatial valuation (`NYC-Property-Scout`), SSE Docker fleet telemetry (`nitro-lab`), hybrid BM25+vector RRF search (`Watch-Engine`), deterministic CPT/NCCI medical bill auditing (`ClaimLess`), and quantitative portfolio simulation (`finsim`).
 3. **Verified Upstream Open-Source Pull Requests Merged Under `aazminu`:** Reviewed and merged upstream fixes across external open-source ecosystems including agent-native analytics engineering and `dbt` AST transformation (`exmergo/dex` [#634](https://github.com/exmergo/dex/pull/634) and [#633](https://github.com/exmergo/dex/pull/633)), asynchronous multi-agent session rollback persistence (`GustavoBaranda/chatflow-agent` [#52](https://github.com/GustavoBaranda/chatflow-agent/pull/52)), and codebase intelligence / dead-code graph analysis (`repowise-dev/repowise` [#3841](https://github.com/repowise-dev/repowise/pull/3841)).
+
+## Proposed 6–12-Month Research Programme
+
+The research question is whether PaperPulse's source-grounded literature evidence can improve the traceability and prioritization of ChromAlphaGenome regulatory variants relative to a fixed baseline. The prospective first six months cover versioned data manifests, a benchmark, reproducible agent skills, and fixed-baseline versus agent-assisted evaluation. The following six months are planned for replication, error analysis, and preparation of a methods submission. These are proposed activities, not completed results; see the [programme overview](/lab/#programme).
 
 ---
 

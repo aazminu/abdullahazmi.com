@@ -229,9 +229,12 @@ test('HTML pages (/, /lab/, /research/) have valid structure, metadata, and reso
   for (const thrust of ['THRUST 01', 'THRUST 02', 'THRUST 03', 'THRUST 04']) {
     assert.ok(labHtml.includes(thrust), `/lab/index.html must include ${thrust}`);
   }
-  for (const sectionId of ['id="hero"', 'id="mission"', 'id="thrusts"', 'id="software"', 'id="publications"', 'id="people"', 'id="footer"']) {
+  for (const sectionId of ['id="hero"', 'id="programme"', 'id="thrusts"', 'id="software"', 'id="publications"', 'id="people"', 'id="footer"']) {
     assert.ok(labHtml.includes(sectionId), `/lab/index.html must include section ${sectionId}`);
   }
+  assert.ok(labHtml.includes('Prospective Research Programme'), '/lab/ must label its roadmap as prospective');
+  assert.ok(labHtml.includes('planned measurements, not established results'), '/lab/ must distinguish planned evaluation from results');
+  assert.match(labHtml, /extension\.css\?v=research-20261021/, '/lab/ must request the versioned enhancer stylesheet');
 });
 
 test('JSON-LD structured data is valid Schema.org JSON with resolved @id references across /, /lab/, and /research/', () => {
@@ -283,7 +286,7 @@ test('JSON-LD structured data is valid Schema.org JSON with resolved @id referen
         assert.strictEqual(person.name, 'Abdullah Azmi');
         assert.strictEqual(person.email, 'mailto:m4u5t4@u.northwestern.edu');
         assert.ok(person.sameAs.includes('https://github.com/aazminu'));
-        assert.ok(person.sameAs.includes('https://orcid.org/0009-0004-8172-6394'));
+        assert.ok(person.sameAs.includes('https://orcid.org/0009-0005-2720-3347'));
       } else {
         const codeNodes = parsed['@graph'].filter((node) => node['@type'] === 'SoftwareSourceCode');
         assert.strictEqual(codeNodes.length, 4, `${page.relPath} JSON-LD must include all 4 flagship SoftwareSourceCode packages`);
@@ -717,6 +720,9 @@ test('assets/extension.js executes in a DOM harness and renders featured banner,
   }
 
   const labAnchors = researchLab.querySelectorAll('a').map((a) => a.href);
+  assert.ok(labAnchors.includes('./lab/#programme'), '#research-lab must link directly to the programme anchor');
+  assert.ok(labAnchors.includes('https://orcid.org/0009-0005-2720-3347'), '#research-lab must include the valid ORCID record');
+  assert.ok(labAnchors.includes('mailto:m4u5t4@u.northwestern.edu'), '#research-lab must include institutional contact');
   for (const repo of ALL_28_REPOS) {
     assert.ok(
       labAnchors.includes(`https://github.com/aazminu/${repo}`),
@@ -727,6 +733,40 @@ test('assets/extension.js executes in a DOM harness and renders featured banner,
     assert.ok(labAnchors.includes(prUrl), `#research-lab DOM missing anchor for ${prUrl}`);
   }
   assert.strictEqual(root.querySelectorAll('[data-lab-nav]').length, 3, 'Navigation must include 3 injected lab nav buttons');
+});
+
+test('Public pages and runtime assets expose current researcher links and no withdrawn contact or invalid ORCID', () => {
+  const indexHtml = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
+  const labHtml = fs.readFileSync(path.join(ROOT, 'lab/index.html'), 'utf8');
+  const researchHtml = fs.readFileSync(path.join(ROOT, 'research/index.html'), 'utf8');
+  const extensionJs = fs.readFileSync(path.join(ROOT, 'assets/extension.js'), 'utf8');
+  const bundleRefs = [
+    'assets/index-VqgN4zkm.js',
+    'assets/index-2552cda7.js'
+  ];
+  const entryBundleMatch = indexHtml.match(/<script\b[^>]*src="\.\/assets\/(index-[^"]+\.js)"/);
+  assert.ok(entryBundleMatch, 'index.html must reference a content-versioned core bundle');
+  bundleRefs.push(`assets/${entryBundleMatch[1]}`);
+
+  const publicSiteFiles = [
+    ['index.html', indexHtml],
+    ['lab/index.html', labHtml],
+    ['research/index.html', researchHtml],
+    ['assets/extension.js', extensionJs],
+    ...bundleRefs.map((rel) => [rel, fs.readFileSync(path.join(ROOT, rel), 'utf8')])
+  ];
+  const currentDocs = ['README.md', 'PROFILE_PLAN.md', 'provenance.md'].map((rel) => [rel, fs.readFileSync(path.join(ROOT, rel), 'utf8')]);
+  const reviewedFiles = [...publicSiteFiles, ...currentDocs];
+  const withdrawnOrcid = ['0009', '0004', '8172', '6394'].join('-');
+  for (const [name, content] of reviewedFiles) {
+    assert.doesNotMatch(content, /erlokix@gmail\.com/i, `${name} must not expose the withdrawn personal email`);
+    assert.equal(content.includes(withdrawnOrcid), false, `${name} must not expose the invalid ORCID`);
+  }
+
+  for (const [name, content] of publicSiteFiles) {
+    assert.ok(content.includes('0009-0005-2720-3347'), `${name} must expose the current ORCID`);
+  }
+  assert.match(indexHtml, /extension\.js\?v=research-20261021/, 'index.html must request the versioned enhancer script');
 });
 
 test('Validator helpers handle empty inputs, unquoted/reordered attributes, external schemes, path traversal, and strict identity isolation safely', () => {

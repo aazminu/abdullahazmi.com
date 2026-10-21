@@ -66,34 +66,34 @@
 
   const labThrusts = [
     {
-      name: 'Thrust 01 · Autonomous Literature & Citation Knowledge Graphs',
+      name: 'Programme System 01 · Literature & Citation Provenance',
       award: 'PaperPulse · ArXiv, PubMed, Semantic Scholar & OpenAlex',
       tech: ['Scientific Knowledge Graphs', 'Neo4j & pgvector', 'Claim Provenance', 'Multi-Agent Verification'],
-      description: 'Constructs continuously updated citation-concept subgraphs and hybrid dense/graph indexes over millions of preprints and biomedical articles, enforcing zero-hallucination provenance for every synthesized hypothesis.',
+      description: 'Organizes scientific papers, citations, methods, and supporting passages so literature-derived claims can be traced back to their sources.',
       repoUrl: 'https://github.com/aazminu/paper-pulse',
-      labAnchor: './lab/#thrusts'
+      labAnchor: './lab/#programme'
     },
     {
-      name: 'Thrust 02 · Regulatory Genomics & Non-Coding Variant Attribution',
+      name: 'Programme System 02 · Non-Coding Variant Prioritization',
       award: 'ChromAlphaGenome · AlphaGenome Atlas, ClinVar & ENCODE v4',
       tech: ['Chromatin Accessibility', 'Sashimi Splice ΔPSI', 'DeepLIFT / ChromBPNet', 'Variant Prioritization'],
-      description: 'Decodes cis-regulatory grammar and cryptic splice-site disruptions in non-coding human disease cohorts by coupling base-resolution chromatin accessibility log-fold-change tracks with MaxEntScan ΔPSI modeling (0.941 AUROC).',
+      description: 'Combines regulatory accessibility and splice-disruption signals to examine candidate non-coding variants, with inputs and model outputs recorded for review.',
       repoUrl: 'https://github.com/aazminu/chrom-alphagenome',
-      labAnchor: './lab/#thrusts'
+      labAnchor: './lab/#programme'
     },
     {
-      name: 'Thrust 03 · Recursive Bayesian Inference & Uncertainty Quantification',
+      name: 'Complementary System · Bayesian State-Space Inference',
       award: 'BayesKalmanTrace · State-Space Filtering & Log-Linear Pooling',
       tech: ['Kalman / RTS Smoothing', 'Missing-Data Marginalization', 'Empirical Bayes', 'Calibrated Posteriors'],
-      description: 'Propagates exact analytical state-space posteriors across noisy longitudinal and single-particle velocity trajectories with intermittent observation dropouts, fusing multi-scale volatility descriptors via log-linear pooling.',
+      description: 'A complementary software project for state-space filtering, missing-data handling, and uncertainty quantification.',
       repoUrl: 'https://github.com/aazminu/bayes-kalman-trace',
       labAnchor: './lab/#thrusts'
     },
     {
-      name: 'Thrust 04 · Structural Pocket Partitioning & Quantum Energetics',
+      name: 'Complementary System · Structural Pocket Energetics',
       award: 'FoldEnergetics-xTB · AlphaFold 3, Foldseek 3Di & GFN2-xTB',
       tech: ['PAE Graph Partitioning', 'Foldseek 3Di Homology', 'Semiempirical QM (xTB)', 'ChEMBL Bioactivity'],
-      description: 'Partitions AlphaFold 3 Predicted Aligned Error matrices into rigid structural domains, identifies conserved cryptic binding pockets via Foldseek 3Di alignments, and ranks scaffolds with GFN2-xTB tight-binding energetics.',
+      description: 'A complementary software project for structural-domain partitioning, pocket analysis, and semiempirical energetic scoring.',
       repoUrl: 'https://github.com/aazminu/fold-energetics-xtb',
       labAnchor: './lab/#thrusts'
     }
@@ -1164,7 +1164,7 @@
 
     const head = document.createElement('div');
     head.className = 'sectionHead';
-    head.append(createText('p', 'sectionLabel', 'Department of Computer Science & NICO · Northwestern University'));
+    head.append(createText('p', 'sectionLabel', 'Prospective public research programme · Northwestern University'));
     const title = createText('h1', 'sectionTitle', 'CGAS Research Lab');
     title.id = 'portfolio-lab-title';
     head.append(title);
@@ -1179,48 +1179,55 @@
     const kicker = document.createElement('p');
     kicker.className = 'portfolio-featured__kicker';
     kicker.append(
-      createText('span', 'portfolio-featured__label', 'COMPUTATIONAL / DRY LAB — NORTHWESTERN CS & NICO'),
-      createText('span', 'portfolio-featured__index', 'MUDD HALL · EVANSTON, IL')
+      createText('span', 'portfolio-featured__label', 'PUBLIC, NON-COMMERCIAL · COMPUTATIONAL / DRY LAB'),
+      createText('span', 'portfolio-featured__index', '6 / 12 MONTH ROADMAP')
     );
 
     const titleRow = document.createElement('div');
     titleRow.className = 'portfolio-featured__title-row';
     titleRow.append(
-      createText('h2', 'portfolio-featured__title', 'Computational Genomics & Agentic Systems (CGAS) Lab'),
-      createText('span', 'portfolio-featured__status', 'Non-Commercial Research')
+      createText('h2', 'portfolio-featured__title', 'Can literature evidence make non-coding variant prioritization more traceable?'),
+      createText('span', 'portfolio-featured__status', 'Prospective Programme')
     );
 
     const description = createText(
       'p',
       'portfolio-featured__description',
-      'Directed by Lead Researcher Abdullah Azmi in collaboration with faculty across Northwestern Computer Science and the Northwestern Institute on Complex Systems (NICO), the CGAS Lab investigates autonomous multi-agent reasoning, citation-grounded scientific knowledge graphs (PaperPulse), base-resolution cis-regulatory and splice-disruption modeling (ChromAlphaGenome), recursive Bayesian state-space filtering (BayesKalmanTrace), and quantum-chemical pocket energetics (FoldEnergetics-xTB).'
+      'Approach: connect PaperPulse source and citation provenance with ChromAlphaGenome regulatory and splice-disruption analyses through reproducible Python workflows. Google Antigravity will support workflow authoring, parallel baseline evaluation, and tests; human review will check sources, inputs, and interpretations. Six-month deliverables are versioned public data manifests, a benchmark and evaluation harness, and reusable workflows and skills. Twelve-month goals are replication, error analysis, and a methods manuscript submission.'
     );
 
     const techList = document.createElement('ul');
     techList.className = 'portfolio-featured__tech';
     for (const tag of [
-      'Scientific Knowledge Graphs',
-      'Regulatory Genomics (AlphaGenome)',
-      'Bayesian State-Space Inference',
-      'Protein Pocket Energetics (xTB)',
-      'Google Antigravity Workflows'
+      'PaperPulse citation provenance',
+      'ChromAlphaGenome variant analysis',
+      'Reproducible Python workflows',
+      'Google Antigravity evaluation support',
+      'Human scientific verification'
     ]) {
       techList.append(createText('li', '', tag));
     }
 
     const actions = document.createElement('div');
     actions.className = 'portfolio-lab__actions';
-    const labLink = createText('a', 'portfolio-lab__btn', 'Open Full CGAS Lab Portal (/lab/) ↗');
-    labLink.href = './lab/';
+    actions.setAttribute('aria-label', 'Researcher, programme, source, and contact links');
+    const programmeLink = createText('a', 'portfolio-lab__btn', 'Research question & 6 / 12 month plan ↗');
+    programmeLink.href = './lab/#programme';
     const ghLink = createText('a', 'portfolio-lab__btn', 'All Repositories (github.com/aazminu) ↗');
     ghLink.href = 'https://github.com/aazminu';
     ghLink.target = '_blank';
     ghLink.rel = 'noreferrer';
+    const contactLink = createText('a', 'portfolio-lab__btn', 'Institutional email ↗');
+    contactLink.href = 'mailto:m4u5t4@u.northwestern.edu';
+    const orcidLink = createText('a', 'portfolio-lab__btn', 'ORCID researcher record ↗');
+    orcidLink.href = 'https://orcid.org/0009-0005-2720-3347';
+    orcidLink.target = '_blank';
+    orcidLink.rel = 'noreferrer';
     const cvLink = createText('a', 'portfolio-lab__btn', 'Curriculum Vitae / Resume (PDF) ↗');
     cvLink.href = './assets/abdullah-azmi-resume.pdf';
     cvLink.target = '_blank';
     cvLink.rel = 'noreferrer';
-    actions.append(labLink, ghLink, cvLink);
+    actions.append(programmeLink, ghLink, orcidLink, contactLink, cvLink);
 
     main.append(kicker, titleRow, description, techList, actions);
 
@@ -1228,9 +1235,9 @@
     aside.className = 'portfolio-featured__meta';
     const metaRows = [
       ['INSTITUTION', 'Northwestern University · CS & NICO'],
-      ['LEAD RESEARCHER', 'Abdullah Azmi · Mudd Hall 3510'],
-      ['METHODOLOGY', 'Computational / Dry Lab'],
-      ['OPEN-SOURCE SUITE', '30 Public Repos · 28 Standalone Systems']
+      ['RESEARCHER', 'Abdullah Azmi'],
+      ['PROGRAMME SYSTEMS', 'PaperPulse + ChromAlphaGenome'],
+      ['EVALUATION', 'Fixed baseline · Held-out data · Human review']
     ];
     for (const [label, value] of metaRows) {
       const row = document.createElement('div');
