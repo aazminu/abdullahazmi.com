@@ -90,5 +90,23 @@ The prospective 6–12-month programme asks whether PaperPulse's source-grounded
 | `sitemap.xml` & `robots.txt` | Search engine crawl directives and XML sitemap indexing `/`, `/lab/`, `/research/`, and the CV PDF |
 | `tests/portfolio.test.mjs` | Automated `node --test` verification suite validating HTML structure, Schema.org JSON-LD, sitemap/robots.txt, binary/text asset integrity, all 28 standalone GitHub repository links, and verified upstream open-source PR links |
 
+### 1C. Quantitative Finance, Systems & Infrastructure Repositories (`github.com/aazminu`)
 
-
+| Repository | Domain | Primary Stack & Verification Suite |
+| :--- | :--- | :--- |
+| [`aazminu/bpipe-lob-engine`](https://github.com/aazminu/bpipe-lob-engine) | Price-Time Priority Limit Order Book | Python 3.11+, L2/L3 depth, micro-price, order-flow imbalance (OFI), `pytest` & CLI diagnostics |
+| [`aazminu/fix-dropcopy-reconciler`](https://github.com/aazminu/fix-dropcopy-reconciler) | FIX 4.2/4.4 Execution Reconciler | Python 3.11+, `ClOrdID`/`ExecID` drop-copy state machine, sequence-gap detector, `pytest` & CLI diagnostics |
+| [`aazminu/yield-curve-oas-engine`](https://github.com/aazminu/yield-curve-oas-engine) | Par-to-Zero Curve & OAS Lattice Engine | Python 3.11+, Nelson-Siegel-Svensson fitter, key-rate DV01, binomial OAS pricer, `pytest` & CLI diagnostics |
+| [`aazminu/sec-edgar-13f-alpha`](https://github.com/aazminu/sec-edgar-13f-alpha) | Institutional 13F-HR Factor Pipeline | Python 3.11+, CUSIP holdings delta parser, crowding HHI, conviction tilt engine, `pytest` & CLI diagnostics |
+| [`aazminu/haven-fanniemae`](https://github.com/aazminu/haven-fanniemae) | Conforming Mortgage & MI Underwriter | Python 3.11+, DTI/LTV/FICO eligibility matrix, LLPA grid, amortization engine, `pytest` & CLI diagnostics |
+| [`aazminu/borrower-check-risk-engine`](https://github.com/aazminu/borrower-check-risk-engine) | Credit Underwriting & Fair-Lending Engine | Python 3.11+, WOE/IV binning, calibrated log-odds PD scorecard, 80% disparate impact audit, `pytest` & CLI |
+| [`aazminu/raft-wal-kv`](https://github.com/aazminu/raft-wal-kv) | Raft Consensus & CRC32 WAL Engine | Python 3.11+, leader election, log replication, safety invariants, crash-safe WAL recovery, `pytest` & CLI |
+| [`aazminu/llm-kv-paged-allocator`](https://github.com/aazminu/llm-kv-paged-allocator) | Paged KV-Cache Block Manager | Python 3.11+, copy-on-write prefix sharing, LRU eviction, token-budget preemption, `pytest` & CLI diagnostics |
+| [`aazminu/otel-ebpf-span-aggregator`](https://github.com/aazminu/otel-ebpf-span-aggregator) | OpenTelemetry DAG & Tail-Sampling Engine | Python 3.11+, W3C TraceContext assembler, HDR histogram percentiles, anomaly tail sampler, `pytest` & CLI |
+| [`aazminu/bitboard-uci-chess`](https://github.com/aazminu/bitboard-uci-chess) | 64-Bit Bitboard Chess Engine | Python 3.11+, Perft move generator, Zobrist hashing, PVS + MVV-LVA + killer heuristic search, `pytest` & CLI |
+| [`aazminu/mta-gtfs-nyc-tracker`](https://github.com/aazminu/mta-gtfs-nyc-tracker) | NYC Subway Headway & Bunching Analytics | Python 3.11+, GTFS-Realtime feed reconciler, Excess Wait Time (EWT), bunching detector, `pytest` & CLI |
+| [`aazminu/utilitrack-cbre`](https://github.com/aazminu/utilitrack-cbre) | Commercial Portfolio 3R Utility Baselines | Python 3.11+, weather-normalized HDD/CDD regression, ENERGY STAR EUI, CUSUM drift alerts, `pytest` & CLI |
+| [`aazminu/chatphd-triage`](https://github.com/aazminu/chatphd-triage) | Clinical Acuity Triage & ICD-10 Coding | Python 3.11+, ESI 1-5 red-flag detector, hybrid BM25 + semantic ICD-10-CM/CPTgrounded coder, `pytest` & CLI |
+| [`aazminu/park-ez-vision`](https://github.com/aazminu/park-ez-vision) | Spatial Lot Occupancy & Dynamic Pricing | Python 3.11+, polygon IoU occupancy classifier, temporal hysteresis smoother, surge pricing, `pytest` & CLI |
+| [`aazminu/espresso-pid-telemetry`](https://github.com/aazminu/espresso-pid-telemetry) | Anti-Windup PID & Extraction Profiling | Python 3.11+, derivative-on-measurement thermal loop, 9-bar pre-infusion profiler, `pytest` & CLI |
+| [`aazminu/ergo-keymap-optimizer`](https://github.com/aazminu/ergo-keymap-optimizer) | Split-Keyboard QMK Layout Annealer | Python 3.11+, corpus bigram/trigram analyzer, SFB/scissor cost function, simulated annealing, `pytest` & CLI |
