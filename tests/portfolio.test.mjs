@@ -846,3 +846,28 @@ test('Validator helpers handle empty inputs, unquoted/reordered attributes, exte
     /Path traversal not allowed/
   );
 });
+
+test('provenance.md documents Section 1C quantitative and systems repositories', () => {
+  const prov = fs.readFileSync(path.join(ROOT, 'provenance.md'), 'utf8');
+  const expectedRepos = [
+    'aazminu/bpipe-lob-engine',
+    'aazminu/fix-dropcopy-reconciler',
+    'aazminu/yield-curve-oas-engine',
+    'aazminu/sec-edgar-13f-alpha',
+    'aazminu/haven-fanniemae',
+    'aazminu/borrower-check-risk-engine',
+    'aazminu/raft-wal-kv',
+    'aazminu/llm-kv-paged-allocator',
+    'aazminu/otel-ebpf-span-aggregator',
+    'aazminu/bitboard-uci-chess',
+    'aazminu/mta-gtfs-nyc-tracker',
+    'aazminu/utilitrack-cbre',
+    'aazminu/chatphd-triage',
+    'aazminu/park-ez-vision',
+    'aazminu/espresso-pid-telemetry',
+    'aazminu/ergo-keymap-optimizer',
+  ];
+  for (const repo of expectedRepos) {
+    assert.ok(prov.includes(repo), `Missing ${repo} in provenance.md`);
+  }
+});
